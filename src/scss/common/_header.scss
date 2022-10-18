@@ -1,0 +1,89 @@
+header {
+	width: 100%;
+	background: #222;
+	.inner {
+		width: 1180px;
+		height: 80px;
+		margin: 0 auto;
+		position: relative;
+
+		h1 {
+			position: absolute;
+			bottom: 20px;
+			left: 0px;
+			a {
+				font: bold 24px/1 'arial';
+				color: #fff;
+			}
+		}
+		#gnb {
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+			li {
+				float: left;
+				a {
+					display: inline-block;
+					padding: 20px 30px;
+					font: bold 14px/1 'arial';
+					color: #fff;
+				}
+			}
+		}
+		.fa-bars {
+			font-size: 24px;
+			position: absolute;
+			bottom: 20px;
+			right: 40px;
+			display: none;
+		}
+	}
+	&.sub {
+		background: #fff;
+		.inner {
+			h1 a {
+				color: #222;
+			}
+			#gnb li a {
+				color: #333;
+			}
+			.fa-bars {
+				color: #333;
+			}
+		}
+	}
+	&.main {
+		background: #fff;
+		border-bottom: 1px solid #ccc;
+		.inner {
+			h1 a {
+				color: #555;
+			}
+			#gnb li a {
+				color: #555;
+			}
+			.fa-bars {
+				color: #ddd;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	header {
+		width: 100%;
+		.inner {
+			width: 100%;
+			h1 {
+				bottom: 20px;
+				left: 40px;
+			}
+			#gnb {
+				display: none;
+			}
+			.fa-bars {
+				display: block;
+			}
+		}
+	}
+}

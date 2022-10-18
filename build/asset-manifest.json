@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hieun33/react_start.git/static/css/main.2453d627.css",
+    "main.js": "/hieun33/react_start.git/static/js/main.62a045e0.js",
+    "index.html": "/hieun33/react_start.git/index.html",
+    "main.2453d627.css.map": "/hieun33/react_start.git/static/css/main.2453d627.css.map",
+    "main.62a045e0.js.map": "/hieun33/react_start.git/static/js/main.62a045e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2453d627.css",
+    "static/js/main.62a045e0.js"
+  ]
+}

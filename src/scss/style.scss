@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+$tablet: 1179px;
+$mobile: 539px;
+
+//common
+@import 'common/reset';
+@import 'common/footer';
+@import 'common/layout';
+@import 'common/header';
+@import 'common/popup';
+
+//main
+@import 'main/content';
+@import 'main/visual';
+
+//sub
+@import 'sub/community';
+@import 'sub/department';
+@import 'sub/gallerty';
+@import 'sub/location';
+@import 'sub/member';
+@import 'sub/youtube';

@@ -1,0 +1,66 @@
+.Department {
+	> .inner {
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		article {
+			width: 33.333%;
+			float: left;
+			padding: 10px;
+			margin-bottom: 50px;
+			.inner {
+				width: 100%;
+				.pic {
+					width: 100%;
+					height: 300px;
+					background: #111;
+					margin-bottom: 20px;
+					filter: saturate(0.2);
+					transition: 0.5s;
+					&:hover {
+						filter: saturate(1.1);
+					}
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1179px) {
+	.Department {
+		> .inner {
+			article {
+				width: 50%;
+				margin-bottom: 40px;
+				.inner {
+					.pic {
+						height: 260px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 539px) {
+	.Department {
+		> .inner {
+			article {
+				width: 100%;
+				margin-bottom: 30px;
+				.inner {
+					.pic {
+						height: 200px;
+					}
+				}
+			}
+		}
+	}
+}

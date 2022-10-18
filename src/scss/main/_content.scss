@@ -1,0 +1,12 @@
+main {
+	width: 1180px;
+	min-height: 500px;
+	margin: 150px auto;
+}
+
+@media screen and (max-width: $tablet) {
+	main {
+		width: 100%;
+		padding: 0px 40px;
+	}
+}
