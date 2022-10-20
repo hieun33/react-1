@@ -1,6 +1,6 @@
 header {
 	width: 100%;
-	background: #222;
+	background: #000;
 	.inner {
 		width: 1180px;
 		height: 80px;
@@ -9,11 +9,14 @@ header {
 
 		h1 {
 			position: absolute;
-			bottom: 20px;
+			bottom: 10px;
 			left: 0px;
 			a {
 				font: bold 24px/1 'arial';
 				color: #fff;
+			}
+			img{
+				height: 30px;
 			}
 		}
 		#gnb {
@@ -39,6 +42,7 @@ header {
 		}
 	}
 	&.sub {
+		border-bottom: 1px solid #999;
 		background: #fff;
 		.inner {
 			h1 a {
@@ -53,17 +57,21 @@ header {
 		}
 	}
 	&.main {
-		background: #fff;
+		background: transparent;
 		border-bottom: 1px solid #ccc;
+		position: absolute;
+		top: 0; left: 0;
+		z-index: 3;
+		
 		.inner {
 			h1 a {
-				color: #555;
+				color: #fff;
 			}
 			#gnb li a {
-				color: #555;
+				color: #fff;
 			}
 			.fa-bars {
-				color: #ddd;
+				color: #fff;
 			}
 		}
 	}

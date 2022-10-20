@@ -12,6 +12,20 @@ li {
 a {
   text-decoration: none; }
 
+body {
+  background-color: #efefef; }
+
+table, th, td {
+  border-collapse: collapse; }
+
+fieldset {
+  border: none; }
+
+.h {
+  position: absolute;
+  top: -9999999px;
+  opacity: 0; }
+
 footer {
   width: 100%;
   border-top: 1px solid #bbb;
@@ -70,7 +84,7 @@ footer {
     padding: 0px 40px; } }
 header {
   width: 100%;
-  background: #222; }
+  background: #000; }
   header .inner {
     width: 1180px;
     height: 80px;
@@ -78,11 +92,13 @@ header {
     position: relative; }
     header .inner h1 {
       position: absolute;
-      bottom: 20px;
+      bottom: 10px;
       left: 0px; }
       header .inner h1 a {
         font: bold 24px/1 'arial';
         color: #fff; }
+      header .inner h1 img {
+        height: 30px; }
     header .inner #gnb {
       position: absolute;
       bottom: 0px;
@@ -101,6 +117,7 @@ header {
       right: 40px;
       display: none; }
   header.sub {
+    border-bottom: 1px solid #999;
     background: #fff; }
     header.sub .inner h1 a {
       color: #222; }
@@ -109,14 +126,18 @@ header {
     header.sub .inner .fa-bars {
       color: #333; }
   header.main {
-    background: #fff;
-    border-bottom: 1px solid #ccc; }
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3; }
     header.main .inner h1 a {
-      color: #555; }
+      color: #fff; }
     header.main .inner #gnb li a {
-      color: #555; }
+      color: #fff; }
     header.main .inner .fa-bars {
-      color: #ddd; }
+      color: #fff; }
 
 @media screen and (max-width: 1179px) {
   header {
@@ -155,15 +176,79 @@ header {
     right: 5vw;
     cursor: pointer; }
 
-main {
-  width: 1180px;
-  min-height: 500px;
-  margin: 150px auto; }
-
-@media screen and (max-width: 1179px) {
-  main {
+#news {
+  width: 100%;
+  height: 100vh;
+  background: #c6ffc6;
+  position: relative;
+  padding: 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  #news h1 {
+    display: block;
     width: 100%;
-    padding: 0px 40px; } }
+    text-align: center;
+    margin-bottom: 20px; }
+  #news article {
+    width: 15%;
+    min-height: 180px;
+    border: 1px solid #888;
+    padding: 20px;
+    margin: 10px;
+    transform: rotateY(200deg) translate(-400px);
+    opacity: 0;
+    transition-duration: 0.5s; }
+    #news article h2 {
+      font: bold 18px/1 'arial';
+      color: #444;
+      margin-bottom: 15px; }
+    #news article p {
+      font: 14px/1.2 'arial';
+      color: #777; }
+  #news.on article {
+    opacity: 1;
+    transform: rotateY(0deg) translate(0px); }
+    #news.on article:nth-of-type(1) {
+      transition-delay: 0.3s; }
+    #news.on article:nth-of-type(2) {
+      transition-delay: 0.6s; }
+    #news.on article:nth-of-type(3) {
+      transition-delay: 0.9s; }
+    #news.on article:nth-of-type(4) {
+      transition-delay: 1.2s; }
+    #news.on article:nth-of-type(5) {
+      transition-delay: 1.5s; }
+
+#pics {
+  width: 100%;
+  height: 100vh;
+  background-color: #c6fcff;
+  position: relative;
+  padding: 10vw;
+  overflow: hidden; }
+  #pics p {
+    font: bold 175px/1 'arial';
+    color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 100px;
+    left: 100px; }
+  #pics h3 {
+    font: bold 150px/1 'arial';
+    color: #fff;
+    position: absolute;
+    top: 160px;
+    left: 100px;
+    text-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4); }
+
+#vids {
+  width: 100%;
+  height: 100vh;
+  background: #eeffc6;
+  position: relative;
+  padding: 10vw; }
+
 #visual {
   width: 100%;
   height: 100vh;
@@ -171,6 +256,95 @@ main {
   position: relative;
   z-index: 1; }
 
+.scroll_navi {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+  z-index: 3; }
+  .scroll_navi li {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #111;
+    background-color: #fff;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.5s; }
+    .scroll_navi li.on {
+      height: 100px;
+      background-color: #111;
+      border: #fff; }
+
+.Community > .inner .inputBox {
+  width: 100%;
+  border: 1px solid #bbb;
+  padding: 50px;
+  margin-bottom: 50px; }
+  .Community > .inner .inputBox input[type='text'], .Community > .inner .inputBox textarea {
+    width: 50%;
+    padding: 8px 10px;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+    resize: none; }
+  .Community > .inner .inputBox .btnSet {
+    padding: 20px 34% 5px; }
+    .Community > .inner .inputBox .btnSet button {
+      width: 150px;
+      height: 30px;
+      display: inline-block;
+      border: none;
+      background: #555;
+      color: #ffff;
+      cursor: pointer;
+      margin-right: 20px; }
+.Community > .inner .showBox {
+  width: 100%;
+  border: 1px solid #bbb;
+  padding: 50px; }
+  .Community > .inner .showBox article {
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center; }
+    .Community > .inner .showBox article .editTxt {
+      width: 60%; }
+      .Community > .inner .showBox article .editTxt input[type='text'],
+      .Community > .inner .showBox article .editTxt textarea {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid lightblue;
+        margin-bottom: 20px;
+        background-color: #eaf9f9;
+        resize: none; }
+    .Community > .inner .showBox article .btnSet {
+      display: flex;
+      align-items: center; }
+      .Community > .inner .showBox article .btnSet button {
+        background-color: transparent;
+        margin: 10px;
+        cursor: pointer;
+        border: none; }
+
+@media screen and (max-width: 1179px) {
+  .Community > .inner .inputBox input[type='text'],
+  .Community > .inner .inputBox textarea {
+    width: 100%; }
+  .Community > .inner .inputBox .btnSet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .Community > .inner .inputBox .btnSet button {
+      width: 47%;
+      margin-right: 0px; }
+  .Community > .inner .showBox article .editTxt .txt {
+    width: 100%; }
+  .Community > .inner .showBox article .btnSet {
+    margin-top: 20px; }
+    .Community > .inner .showBox article .btnSet button {
+      margin-left: 0px; } }
 .Department > .inner::after {
   content: '';
   display: block;
@@ -243,7 +417,80 @@ main {
 
 .Member figure {
   background: lightgreen; }
+.Member > .inner table {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #333;
+  border-bottom: 1px solid #333; }
+  .Member > .inner table th {
+    width: 20%;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    padding: 15px 30px;
+    text-align: left; }
+    .Member > .inner table th:last-child {
+      text-align: center; }
+    .Member > .inner table th input[type='reset']
+    input[type='submit'] {
+      border: 1px solid #aaa;
+      width: 150px;
+      height: 30px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px;
+      cursor: pointer; }
+  .Member > .inner table td {
+    border: none;
+    border-bottom: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    padding: 15px 30px; }
+    .Member > .inner table td input[type='text'],
+    .Member > .inner table td input[type='password'],
+    .Member > .inner table td select,
+    .Member > .inner table td textarea {
+      width: 40%;
+      border: 1px solid #aaa;
+      padding: 6px 10px;
+      resize: none; }
+    .Member > .inner table td label {
+      margin-right: 6px; }
+    .Member > .inner table td input[type='radio'],
+    .Member > .inner table td input[type='checkbox'] {
+      margin-right: 20px; }
+    .Member > .inner table td .err {
+      font: 12px/1 'arial';
+      color: hotpink;
+      margin-left: 10px; }
 
+@media screen and (max-width: 1179px) {
+  .Member > .inner td input[type='text'],
+  .Member > .inner td input[type='password'],
+  .Member > .inner td select,
+  .Member > .inner td textarea {
+    width: 80%; }
+  .Member > .inner td .err {
+    display: block;
+    margin-top: 10px; } }
+@media screen and (max-width: 539px) {
+  .Member > .inner table th {
+    display: none;
+    padding: 15px 0px; }
+    .Member > .inner table th:last-child {
+      display: block;
+      width: 100%; }
+    .Member > .inner table th input[type="reset"],
+    .Member > .inner table th input[type='submit'] {
+      width: 48%;
+      margin: 0px; }
+  .Member > .inner table td {
+    border-left: none;
+    padding: 15px 0px; }
+    .Member > .inner table td input[type='text'],
+    .Member > .inner table td input[type='password'],
+    .Member > .inner table td select,
+    .Member > .inner table td textarea {
+      width: 80%; } }
 .Youtube article {
   border-top: 1px solid #aaa;
   padding: 20px 0px;
