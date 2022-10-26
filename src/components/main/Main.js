@@ -79,7 +79,6 @@ function Main(){
 
         });
     },[Index]);
-
     /*
     리액트를 사용하는 프로젝트에서도 간혹 리얼돔을 직접 선택해야 하는 상황이 종종 발생한다.
     예> input에 focus를 주거나, 지금과 같은 스크롤 위치 알아내기, 특정 DOM의 크기를 측정할때 사용
@@ -105,10 +104,10 @@ function Main(){
     return(
         <main ref={main}>
         <Header type={'main'}/>
-        <Visual />
-        <News />
+        <Visual />        
         <Pics Scrolled={Scrolled} start={pos.current[2]} />
         <Vids />
+        <News />
         <Btns setIndex={setIndex} />
         
         </main>

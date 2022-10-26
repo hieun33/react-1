@@ -1,4 +1,4 @@
-.Member {
+.Signup {
 	figure {
 		background: lightgreen;
 	}
@@ -58,7 +58,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-	.Member{
+	.Signup{
 		>.inner{
 			td{
 				input[type='text'],
@@ -78,7 +78,7 @@
 }
 
 @media screen and (max-width: $mobile) {
-	.Member{
+	.Signup{
 		>.inner{
 			table{
 				th{

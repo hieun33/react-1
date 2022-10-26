@@ -10,11 +10,11 @@ import Main from './components/main/Main';
 
 
 //sub
-import Community from './components/sub/Community';
-import Department from './components/sub/Department';
+import Product from './components/sub/Product';
+import About from './components/sub/About';
 import Gallery from './components/sub/Gallery';
 import Location from './components/sub/Location';
-import Member from './components/sub/Member';
+import Signup from './components/sub/Signup';
 import Youtube from './components/sub/Youtube';
 
 import './scss/style.scss';
@@ -41,11 +41,11 @@ function App() {
 			
 
 
-			<Route path='/department' component={Department} />
-			<Route path='/community' component={Community} />
+			<Route path='/about' component={About} />
+			<Route path='/product' component={Product} />
 			<Route path='/gallery' component={Gallery} />
 			<Route path='/location' component={Location} />
-			<Route path='/member' component={Member} />
+			<Route path='/signup' component={Signup} />
 			<Route path='/youtube' component={Youtube} />
 
 			<Footer />

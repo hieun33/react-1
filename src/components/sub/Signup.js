@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Layout from '../common/Layout';
 
-function Member() {
+function Signup() {
     const history = useHistory();
     /*
     useHistory  : url주소를 변경할 때 사용하는 hook이다.
@@ -273,4 +273,4 @@ function Member() {
 
     );
 }
-export default Member;
+export default Signup;

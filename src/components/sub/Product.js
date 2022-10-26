@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import Layout from "../common/Layout";
-export default function Community() {
+export default function Product() {
 
     
     //더미데이터를 news에 써잇는거를 가져옴.
-     const getLocalData = () =>{
-        
-        const data = localStorage.getItem('post');       
+    const getLocalData = () => {
+        const data = localStorage.getItem('post');
         return JSON.parse(data);
-        
     };
     /*
     보통 데이터들은 새로고침이나 재접속시 초기화된다  <---session storage 브라우저를 종료하면 날라가는 휘발성 저장공간
@@ -26,8 +24,7 @@ export default function Community() {
     const textareaEdit = useRef(null);
 
     //저장된글 배열
-    const [Posts, setPosts] = useState(getLocalData); //[]빈객체배열
-    //
+    const [Posts, setPosts] = useState(getLocalData);
     const [Allowed, setAllowed] = useState(true);
 
     /*
@@ -47,12 +44,12 @@ export default function Community() {
         textarea.current.value = '';
 
         //초기화 함수에서 해당모드 즉 해당 값을 참조했을때만 초기화 되도록 설정
-        if(inputEdit.current){       //inputEdit에 값이 존재하면
-              inputEdit.current.value = '';
-            textareaEdit.current.value = '';  
+        if (inputEdit.current) {        //inputedit에 현 값이 존재하면
+            inputEdit.current.value = '';
+            textareaEdit.current.value = '';
         }
-        
     }
+
 
     //조건 ? 참이면 이코드 : 거짓이면 이코드
 
@@ -60,27 +57,26 @@ export default function Community() {
     const createPost = () => {
 
         //trim으로 공백을 지우고 value봣을때 존재하지 않으면 resetform
-        if(!input.current.value.trim() || !textarea.current.value.trim()){
+        if (!input.current.value.trim() || !textarea.current.value.trim()) {
             resetForm();
             return alert('제목과 본문을 모두 입력하세요');
         }
         //존재하면 setposts
-        setPosts([            
+        setPosts([
+
             {
-                title : input.current.value,
-                content : textarea.current.value
+                title: input.current.value,
+                content: textarea.current.value
             },
-            
             ...Posts,
         ]);
         resetForm();
     };
-
     //글 삭제함수
     const deletePost = (index) => {
         console.log(index);
 
-        setPosts(Posts.filter((_, idx)=>idx !== index));
+        setPosts(Posts.filter((_, idx) => idx !== index));
         /*        
         filter() 메서드는 자바스크립트 배열의 내장함수
         주어진 함수의 테스트를 통과하는 모든 요소를 모아 true면 요소를 유지하고 false면 삭제
@@ -96,55 +92,53 @@ export default function Community() {
         false로 출력되어야하니까 저렇게 코드를 사용
 
         // post, idx 각각의 반복을 도는 객체와 인덱스*/
-    }
+    };
 
     //글 수정모드 변경 함수 =  post.enableUpdate = true; 부여까지만 함. 그럼 return으로 내려감
     const enableUpdate = (index) => {
-        if(!Allowed) return;  //false이면 return으로 막음
-        setAllowed(false);  
-
+        if (!Allowed) return;  //false이면 return으로 막음
+        setAllowed(false);
         setPosts(
-            Posts.map((post,idx)=>{
-                if(idx === index) post.enableUpdate = true;
+            Posts.map((post, idx) => {
+                if (idx === index) post.enableUpdate = true;
                 return post;
             })
-        )
-    }
+        );
+    };
 
-    const disableUpdate = (index)=>{
+    const disableUpdate = (index) => {
         setAllowed(true);
         setPosts(
-            Posts.map((post,idx)=>{
-                if(idx === index) post.enableUpdate = false;
-                return post;                
+            Posts.map((post, idx) => {
+                if (idx === index) post.enableUpdate = false;
+                return post;
             })
-
         );
-    }
+    };
 
 
     //실제 글 수정함수
-    const updatePost = (index)=>{
-        if(!inputEdit.current.value.trim() || !textareaEdit.current.value.trim()){
+    const updatePost = (index) => {
+        if (!inputEdit.current.value.trim() || !textareaEdit.current.value.trim()) {
             resetForm();
             return alert('수정할 제목과 본문을 모두 입력하세요');
         }
         setAllowed(true);
         setPosts(
-            Posts.map((post,idx)=>{
-                if(idx === index){
-                    //수정한곳(inputEdit의 값을 post에 대입)
+            Posts.map((post, idx) => {
+                if (idx === index) {
                     post.title = inputEdit.current.value;
-                    //수정한것(textareaEdit의 값을 post에 대입)
+                    // 수정한곳(inputEdit의 값을 post의 값에다가 대입해줌)
                     post.content = textareaEdit.current.value;
-                    //수정불가능 false
+                    //수정한곳(textareaEdit의 값을 post의 값에다가 대입해줌)
                     post.enableUpdate = false;
+                    //수정불가능 false
                 }
                 return post;
             })
         );
     };
-    
+
     
 
     //Posts의 값이 변경될때마다 콘솔출력해서 우리가 볼수 있는 
@@ -156,17 +150,19 @@ export default function Community() {
         JSON.stringify(Posts) 메소드로 문자화시켜서 저장해야한다.
         */
         
-        localStorage.setItem('post',JSON.stringify(Posts));
-    },[Posts]);
+        localStorage.setItem('post', JSON.stringify(Posts));
+
+    }, [Posts]);
+
     
     //계속 post가 업데이트 될때마다 불러오기
 
     return (
-        <Layout name={"Community"}>
+        <Layout name={"Product"}>
             <div className="inputBox">
-                <input type="text" placeholder="제목을 입력하세요" ref={input}/>
+                <input type="text" placeholder="제목을 입력하세요" ref={input} />
                 <br />
-                <textarea  cols="30" rows="5" placeholder="본문을 입력하세요" ref={textarea}></textarea>
+                <textarea cols="30" rows="5" placeholder="본문을 입력하세요" ref={textarea}></textarea>
                 <br />
                 <div className="btnSet">
                     <button onClick={resetForm}>CANCLE</button>
@@ -176,42 +172,43 @@ export default function Community() {
             </div>
 
             <div className="showBox">
-                {Posts.map((post,idx)=>{
-                    return(                    
+                {Posts.map((post, idx) => {
+                    return (
                         <article key={idx}>
 
-                        {
-                            post.enableUpdate ?(
+                            {
+                                post.enableUpdate ? (
                                 //반복도는 post에서 enableUpdate true인가요? 물어보는것.
                                 //true일때 -> 수정모드로 랜더링
                                 <>
-                                    <div className="editTxt">
-                                        <input type="text" defaultValue={post.title} ref={inputEdit}/>
-                                        <br />
-                                        <textarea cols="30" rows="4" defaultValue={post.content} ref={textareaEdit} >
-                                        </textarea>
-                                    </div>
-                                    <div className="btnSet">
-                                        <button onClick={()=>disableUpdate(idx)}>CANCLE</button>
-                                        <button onClick={()=>updatePost(idx)}>UPDATE</button>
-                                    </div>
-                                </>
+                                        <div className="editTxt">
+                                            <input type="text" defaultValue={post.title} ref={inputEdit} />
+                                            <br />
+                                            <textarea cols='30' rows='4' defaultValue={post.content} ref={textareaEdit}>
 
-                            ) : (
+                                            </textarea>
+                                        </div>
+                                        <div className="btnSet">
+                                            <button onClick={() => disableUpdate(idx)}>CANCLE</button>
+                                            <button onClick={() => updatePost(idx)}>UPDATE</button>
+                                        </div>
+                                    </>
+                                ) : (
                                 //반복도는 post에서 enableUpdate = false거나 없으aus 일반출력모드로 랜더링
                                 <>
-                                    <div className="txt">
-                                        <h2>{post.title}</h2>
-                                        <p>{post.content}</p>                            
-                                    </div>
-                                    <div className="btnSet">
-                                        <button onClick={()=>enableUpdate(idx)}>EDIT</button>
-                                        <button onCanPlay={()=>deletePost(idx)}>DELETE</button>
-                                    </div>
-                                </>
-                            )
+                                        <div className="txt">
+                                            <h2>{post.title}</h2>
+                                            <p>{post.content}</p>
+                                        </div>
+                                        <div className="btnSet">
+                                            <button onClick={() => enableUpdate(idx)}>EDIT</button>
+                                            <button onClick={() => deletePost(idx)}>DELELTE</button>
+                                        </div>
+                                    </>
+                                )
 
-                        }
+
+                            }
 
                         {/* <div className="txt">
                             <h2>{post.title}</h2>
@@ -227,10 +224,10 @@ export default function Community() {
 
                     </article>
                     );
+
                 })}
             </div>
         </Layout>
     );
 }
-
 

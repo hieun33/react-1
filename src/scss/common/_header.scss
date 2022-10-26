@@ -1,39 +1,41 @@
-header {
+header{
 	width: 100%;
-	background: #000;
+	
 	.inner {
-		width: 1180px;
-		height: 80px;
+		width: 100%;
+		height: 130px;
 		margin: 0 auto;
 		position: relative;
+		background: #566f6b;
+		
 
 		h1 {
 			position: absolute;
-			bottom: 10px;
-			left: 0px;
-			a {
-				font: bold 24px/1 'arial';
-				color: #fff;
-			}
-			img{
-				height: 30px;
+			bottom: 0px;
+			left: 150px;			
+			// a {
+			// 	font: 24px/1 'Noto Sans Vai';
+			// 	color: rgba(255,255,255,0.7);				
+			// }
+			img{				
+				height: 110px;				
 			}
 		}
 		#gnb {
 			position: absolute;
 			bottom: 0px;
-			right: 0px;
+			right: 150px;
 			li {
 				float: left;
 				a {
 					display: inline-block;
-					padding: 20px 30px;
-					font: bold 14px/1 'arial';
+					padding: 20px 20px;
+					font: 16px/1 'Open Sans';
 					color: #fff;
 				}
 			}
 		}
-		.fa-bars {
+		.fa-bars{
 			font-size: 24px;
 			position: absolute;
 			bottom: 20px;
@@ -42,33 +44,30 @@ header {
 		}
 	}
 	&.sub {
-		border-bottom: 1px solid #999;
-		background: #fff;
+		border-bottom: 1px solid #566f6b;
+		background: #566f6b;
 		.inner {
-			h1 a {
-				color: #222;
-			}
+			// h1 a {
+			// 	color: rgba(255,255,255,0.7);
+			// }
 			#gnb li a {
-				color: #333;
+				color: rgba(255,255,255,0.4);
 			}
 			.fa-bars {
-				color: #333;
+				color: #fff;
 			}
 		}
 	}
 	&.main {
 		background: transparent;
-		border-bottom: 1px solid #ccc;
+		// border-bottom: none;
 		position: absolute;
 		top: 0; left: 0;
 		z-index: 3;
 		
-		.inner {
-			h1 a {
-				color: #fff;
-			}
+		.inner {			
 			#gnb li a {
-				color: #fff;
+				color: #eee;
 			}
 			.fa-bars {
 				color: #fff;
@@ -82,9 +81,38 @@ header {
 		width: 100%;
 		.inner {
 			width: 100%;
+			height: 100px;
 			h1 {
-				bottom: 20px;
-				left: 40px;
+				bottom: -7px;
+				left: 35px;
+				img{
+					height: 100px;
+					
+				}
+			}
+			#gnb {
+				display: none;
+			}
+			.fa-bars {
+				display: block;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	header {
+		width: 100%;
+		.inner {
+			width: 100%;
+			height: 100px;
+			h1 {
+				bottom: 0px;
+				left: 35px;
+				img{
+					height: 80px;
+					
+				}
 			}
 			#gnb {
 				display: none;

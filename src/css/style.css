@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Vai&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -83,32 +85,29 @@ footer {
     margin: 80px auto 120px;
     padding: 0px 40px; } }
 header {
-  width: 100%;
-  background: #000; }
+  width: 100%; }
   header .inner {
-    width: 1180px;
-    height: 80px;
+    width: 100%;
+    height: 130px;
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    background: #566f6b; }
     header .inner h1 {
       position: absolute;
-      bottom: 10px;
-      left: 0px; }
-      header .inner h1 a {
-        font: bold 24px/1 'arial';
-        color: #fff; }
+      bottom: 0px;
+      left: 150px; }
       header .inner h1 img {
-        height: 30px; }
+        height: 110px; }
     header .inner #gnb {
       position: absolute;
       bottom: 0px;
-      right: 0px; }
+      right: 150px; }
       header .inner #gnb li {
         float: left; }
         header .inner #gnb li a {
           display: inline-block;
-          padding: 20px 30px;
-          font: bold 14px/1 'arial';
+          padding: 20px 20px;
+          font: 16px/1 'Open Sans';
           color: #fff; }
     header .inner .fa-bars {
       font-size: 24px;
@@ -117,25 +116,20 @@ header {
       right: 40px;
       display: none; }
   header.sub {
-    border-bottom: 1px solid #999;
-    background: #fff; }
-    header.sub .inner h1 a {
-      color: #222; }
+    border-bottom: 1px solid #566f6b;
+    background: #566f6b; }
     header.sub .inner #gnb li a {
-      color: #333; }
+      color: rgba(255, 255, 255, 0.4); }
     header.sub .inner .fa-bars {
-      color: #333; }
+      color: #fff; }
   header.main {
     background: transparent;
-    border-bottom: 1px solid #ccc;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 3; }
-    header.main .inner h1 a {
-      color: #fff; }
     header.main .inner #gnb li a {
-      color: #fff; }
+      color: #eee; }
     header.main .inner .fa-bars {
       color: #fff; }
 
@@ -143,10 +137,28 @@ header {
   header {
     width: 100%; }
     header .inner {
-      width: 100%; }
+      width: 100%;
+      height: 100px; }
       header .inner h1 {
-        bottom: 20px;
-        left: 40px; }
+        bottom: -7px;
+        left: 35px; }
+        header .inner h1 img {
+          height: 100px; }
+      header .inner #gnb {
+        display: none; }
+      header .inner .fa-bars {
+        display: block; } }
+@media screen and (max-width: 539px) {
+  header {
+    width: 100%; }
+    header .inner {
+      width: 100%;
+      height: 100px; }
+      header .inner h1 {
+        bottom: 0px;
+        left: 35px; }
+        header .inner h1 img {
+          height: 80px; }
       header .inner #gnb {
         display: none; }
       header .inner .fa-bars {
@@ -162,12 +174,15 @@ header {
   z-index: 5; }
   .pop .con {
     width: 100%;
-    height: 100%;
-    border: 1px solid #555; }
+    height: 100%; }
     .pop .con iframe {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+    .pop .con img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; }
   .pop .close {
     font: bold 14px/1 'arial';
     color: orange;
@@ -248,13 +263,73 @@ header {
   background: #eeffc6;
   position: relative;
   padding: 10vw; }
+  #vids .swiper {
+    height: 100%; }
+    #vids .swiper .swiper-slide {
+      width: 100%; }
+      #vids .swiper .swiper-slide .inner {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: bold 50px/1 'arial';
+        color: #666;
+        opacity: 0.5;
+        transform: scale(0.8);
+        transition: opacity 0.5s, transform 0.5s; }
+      #vids .swiper .swiper-slide.swiper-slide-active .inner {
+        opacity: 1;
+        transform: scale(1); }
 
 #visual {
   width: 100%;
-  height: 100vh;
-  background: #555;
+  height: 700px;
+  background: #566f6b;
   position: relative;
-  z-index: 1; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  #visual h1 {
+    font: 50px/1 'Open Sans';
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 10%; }
+  #visual p {
+    font: normal 18px/1.3 'Open Sans 300';
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 52%;
+    left: 10%; }
+  #visual ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: absolute;
+    top: 70%;
+    left: 10%; }
+    #visual ul a {
+      cursor: pointer;
+      height: 45px;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      padding: 15px 30px;
+      margin-right: 20px;
+      font: 11px/1.2 'Open Sans';
+      letter-spacing: 1px;
+      color: #fff; }
+    #visual ul.on {
+      background: #fff;
+      color: #566f6b; }
+  #visual img {
+    width: 450px;
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    z-index: 3; }
 
 .scroll_navi {
   position: fixed;
@@ -275,113 +350,211 @@ header {
       background-color: #111;
       border: #fff; }
 
-.Community > .inner .inputBox {
+.Product > .inner .inputBox {
   width: 100%;
   border: 1px solid #bbb;
   padding: 50px;
   margin-bottom: 50px; }
-  .Community > .inner .inputBox input[type='text'], .Community > .inner .inputBox textarea {
+  .Product > .inner .inputBox input[type='text'],
+  .Product > .inner .inputBox textarea {
     width: 50%;
     padding: 8px 10px;
     border: 1px solid #aaa;
     margin-bottom: 20px;
     resize: none; }
-  .Community > .inner .inputBox .btnSet {
-    padding: 20px 34% 5px; }
-    .Community > .inner .inputBox .btnSet button {
-      width: 150px;
-      height: 30px;
-      display: inline-block;
-      border: none;
-      background: #555;
-      color: #ffff;
-      cursor: pointer;
-      margin-right: 20px; }
-.Community > .inner .showBox {
+  .Product > .inner .inputBox .btnSet button {
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    border: none;
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 20px; }
+.Product > .inner .showBox {
   width: 100%;
   border: 1px solid #bbb;
   padding: 50px; }
-  .Community > .inner .showBox article {
-    background-color: #fff;
-    padding: 40px;
-    margin-bottom: 30px;
+  .Product > .inner .showBox article {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center; }
-    .Community > .inner .showBox article .editTxt {
+    .Product > .inner .showBox article .editTxt {
       width: 60%; }
-      .Community > .inner .showBox article .editTxt input[type='text'],
-      .Community > .inner .showBox article .editTxt textarea {
+      .Product > .inner .showBox article .editTxt input[type='text'],
+      .Product > .inner .showBox article .editTxt textarea {
         width: 100%;
         padding: 8px 10px;
         border: 1px solid lightblue;
         margin-bottom: 20px;
-        background-color: #eaf9f9;
+        background: #eaf9f9;
         resize: none; }
-    .Community > .inner .showBox article .btnSet {
+    .Product > .inner .showBox article .btnSet {
       display: flex;
       align-items: center; }
-      .Community > .inner .showBox article .btnSet button {
-        background-color: transparent;
+      .Product > .inner .showBox article .btnSet button {
+        background: transparent;
         margin: 10px;
         cursor: pointer;
         border: none; }
+        .Product > .inner .showBox article .btnSet button:nth-of-type(1) {
+          color: orange; }
+        .Product > .inner .showBox article .btnSet button:nth-of-type(2) {
+          color: orangered; }
 
 @media screen and (max-width: 1179px) {
-  .Community > .inner .inputBox input[type='text'],
-  .Community > .inner .inputBox textarea {
+  .Product > .inner .inputBox input[type='text'],
+  .Product > .inner .inputBox textarea {
     width: 100%; }
-  .Community > .inner .inputBox .btnSet {
+  .Product > .inner .inputBox .btnSet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .Community > .inner .inputBox .btnSet button {
+    .Product > .inner .inputBox .btnSet button {
       width: 47%;
       margin-right: 0px; }
-  .Community > .inner .showBox article .editTxt .txt {
+  .Product > .inner .showBox article .editTxt,
+  .Product > .inner .showBox article .txt {
     width: 100%; }
-  .Community > .inner .showBox article .btnSet {
+  .Product > .inner .showBox article .btnSet {
     margin-top: 20px; }
-    .Community > .inner .showBox article .btnSet button {
+    .Product > .inner .showBox article .btnSet button {
       margin-left: 0px; } }
-.Department > .inner::after {
+.About > .inner::after {
   content: '';
   display: block;
   clear: both; }
-.Department > .inner article {
+.About > .inner article {
   width: 33.333%;
   float: left;
   padding: 10px;
   margin-bottom: 50px; }
-  .Department > .inner article .inner {
+  .About > .inner article .inner {
     width: 100%; }
-    .Department > .inner article .inner .pic {
+    .About > .inner article .inner .pic {
       width: 100%;
       height: 300px;
       background: #111;
       margin-bottom: 20px;
       filter: saturate(0.2);
       transition: 0.5s; }
-      .Department > .inner article .inner .pic:hover {
+      .About > .inner article .inner .pic:hover {
         filter: saturate(1.1); }
-      .Department > .inner article .inner .pic img {
+      .About > .inner article .inner .pic img {
         width: 100%;
         height: 100%;
         object-fit: cover; }
 
 @media screen and (max-width: 1179px) {
-  .Department > .inner article {
+  .About > .inner article {
     width: 50%;
     margin-bottom: 40px; }
-    .Department > .inner article .inner .pic {
+    .About > .inner article .inner .pic {
       height: 260px; } }
 @media screen and (max-width: 539px) {
-  .Department > .inner article {
+  .About > .inner article {
     width: 100%;
     margin-bottom: 30px; }
-    .Department > .inner article .inner .pic {
+    .About > .inner article .inner .pic {
       height: 200px; } }
+.Gallery .loading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5; }
+.Gallery .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .Gallery .controls nav {
+    padding: 10px;
+    display: flex;
+    gap: 20px; }
+    .Gallery .controls nav button {
+      border: none;
+      width: 130px;
+      height: 30px;
+      background: #555;
+      font: 12px/30px 'arial';
+      color: #ddd;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
+  .Gallery .controls .searchBox {
+    padding-right: 15px; }
+    .Gallery .controls .searchBox input {
+      width: 200px;
+      height: 26px;
+      background-color: #fff;
+      border: 1px solid #bbb;
+      padding: 3px 8px; }
+    .Gallery .controls .searchBox button {
+      width: 80px;
+      height: 26px;
+      border: none;
+      background: #555;
+      font: 12px/30px 'arial';
+      color: #ddd;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      margin-left: 5px; }
+.Gallery .frame {
+  transform: translate(200px);
+  opacity: 0;
+  transition: all 0.5s; }
+  .Gallery .frame.on {
+    transform: translateY(0px);
+    opacity: 1; }
+  .Gallery .frame::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .Gallery .frame article {
+    width: 25%;
+    padding: 10px;
+    float: left; }
+    .Gallery .frame article .inner {
+      width: 100%;
+      padding: 10px;
+      background: #fff;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); }
+      .Gallery .frame article .inner .pic {
+        width: 100%;
+        margin-bottom: 5px; }
+        .Gallery .frame article .inner .pic img {
+          width: 100%; }
+      .Gallery .frame article .inner h2 {
+        font: normal 14px/1.2 'arial';
+        color: #777;
+        margin-bottom: 30px; }
+      .Gallery .frame article .inner .profile {
+        display: flex;
+        align-items: center; }
+        .Gallery .frame article .inner .profile img {
+          width: 40px;
+          border-radius: 50%;
+          margin-right: 10px; }
+        .Gallery .frame article .inner .profile span {
+          color: #222;
+          cursor: pointer;
+          transition: 0.5s;
+          font-size: 20x;
+          word-break: break-all; }
+          .Gallery .frame article .inner .profile span:hover {
+            color: orange; }
+
+@media screen and (max-width: 1179px) {
+  section .frame article {
+    width: 33.3333%; } }
+@media screen and (max-width: 539px) {
+  section .frame article {
+    width: 100%; } }
 .Location figure {
   background: lightblue; }
 .Location #map {
@@ -415,22 +588,22 @@ header {
         border: 1px solid #333;
         color: #fff; }
 
-.Member figure {
+.Signup figure {
   background: lightgreen; }
-.Member > .inner table {
+.Signup > .inner table {
   width: 100%;
   border: none;
   border-top: 2px solid #333;
   border-bottom: 1px solid #333; }
-  .Member > .inner table th {
+  .Signup > .inner table th {
     width: 20%;
     border: none;
     border-bottom: 1px solid #bbb;
     padding: 15px 30px;
     text-align: left; }
-    .Member > .inner table th:last-child {
+    .Signup > .inner table th:last-child {
       text-align: center; }
-    .Member > .inner table th input[type='reset']
+    .Signup > .inner table th input[type='reset']
     input[type='submit'] {
       border: 1px solid #aaa;
       width: 150px;
@@ -440,56 +613,56 @@ header {
       align-items: center;
       margin: 0px 10px;
       cursor: pointer; }
-  .Member > .inner table td {
+  .Signup > .inner table td {
     border: none;
     border-bottom: 1px solid #bbb;
     border-left: 1px solid #bbb;
     padding: 15px 30px; }
-    .Member > .inner table td input[type='text'],
-    .Member > .inner table td input[type='password'],
-    .Member > .inner table td select,
-    .Member > .inner table td textarea {
+    .Signup > .inner table td input[type='text'],
+    .Signup > .inner table td input[type='password'],
+    .Signup > .inner table td select,
+    .Signup > .inner table td textarea {
       width: 40%;
       border: 1px solid #aaa;
       padding: 6px 10px;
       resize: none; }
-    .Member > .inner table td label {
+    .Signup > .inner table td label {
       margin-right: 6px; }
-    .Member > .inner table td input[type='radio'],
-    .Member > .inner table td input[type='checkbox'] {
+    .Signup > .inner table td input[type='radio'],
+    .Signup > .inner table td input[type='checkbox'] {
       margin-right: 20px; }
-    .Member > .inner table td .err {
+    .Signup > .inner table td .err {
       font: 12px/1 'arial';
       color: hotpink;
       margin-left: 10px; }
 
 @media screen and (max-width: 1179px) {
-  .Member > .inner td input[type='text'],
-  .Member > .inner td input[type='password'],
-  .Member > .inner td select,
-  .Member > .inner td textarea {
+  .Signup > .inner td input[type='text'],
+  .Signup > .inner td input[type='password'],
+  .Signup > .inner td select,
+  .Signup > .inner td textarea {
     width: 80%; }
-  .Member > .inner td .err {
+  .Signup > .inner td .err {
     display: block;
     margin-top: 10px; } }
 @media screen and (max-width: 539px) {
-  .Member > .inner table th {
+  .Signup > .inner table th {
     display: none;
     padding: 15px 0px; }
-    .Member > .inner table th:last-child {
+    .Signup > .inner table th:last-child {
       display: block;
       width: 100%; }
-    .Member > .inner table th input[type="reset"],
-    .Member > .inner table th input[type='submit'] {
+    .Signup > .inner table th input[type="reset"],
+    .Signup > .inner table th input[type='submit'] {
       width: 48%;
       margin: 0px; }
-  .Member > .inner table td {
+  .Signup > .inner table td {
     border-left: none;
     padding: 15px 0px; }
-    .Member > .inner table td input[type='text'],
-    .Member > .inner table td input[type='password'],
-    .Member > .inner table td select,
-    .Member > .inner table td textarea {
+    .Signup > .inner table td input[type='text'],
+    .Signup > .inner table td input[type='password'],
+    .Signup > .inner table td select,
+    .Signup > .inner table td textarea {
       width: 80%; } }
 .Youtube article {
   border-top: 1px solid #aaa;

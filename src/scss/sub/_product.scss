@@ -1,0 +1,111 @@
+.Product {
+	> .inner {
+		.inputBox {
+			width: 100%;
+			border: 1px solid #bbb;
+			padding: 50px;
+			margin-bottom: 50px;
+
+			input[type='text'],
+			textarea {
+				width: 50%;
+				padding: 8px 10px;
+				border: 1px solid #aaa;
+				margin-bottom: 20px;
+				resize: none;
+			}
+			.btnSet {
+				button {
+					width: 150px;
+					height: 30px;
+					display: inline-block;
+					border: none;
+					background: #555;
+					color: #fff;
+					cursor: pointer;
+					margin-right: 20px;
+				}
+			}
+		}
+		.showBox {
+			width: 100%;
+			border: 1px solid #bbb;
+			padding: 50px;
+			article {
+				background: #fff;
+				padding: 30px;
+				margin-bottom: 40px;
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				align-content: center;
+
+				.editTxt {
+					width: 60%;
+					input[type='text'],
+					textarea {
+						width: 100%;
+						padding: 8px 10px;
+						border: 1px solid lightblue;
+						margin-bottom: 20px;
+						background: #eaf9f9;
+						resize: none;
+					}
+				}
+
+				.btnSet {
+					display: flex;
+					align-items: center;
+					button {
+						background: transparent;
+						margin: 10px;
+						cursor: pointer;
+						border: none;
+						&:nth-of-type(1) {
+							color: orange;
+						}
+						&:nth-of-type(2) {
+							color: orangered;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.Product {
+		> .inner {
+			.inputBox {
+				input[type='text'],
+				textarea {
+					width: 100%;
+				}
+				.btnSet {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					button {
+						width: 47%;
+						margin-right: 0px;
+					}
+				}
+			}
+			.showBox {
+				article {
+					.editTxt,
+					.txt {
+						width: 100%;
+					}
+					.btnSet {
+						margin-top: 20px;
+						button {
+							margin-left: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

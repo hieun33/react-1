@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/hieun33/react_start.git/static/css/main.efcc4da4.css",
-    "main.js": "/hieun33/react_start.git/static/js/main.1b4109c5.js",
+    "main.css": "/hieun33/react_start.git/static/css/main.0afed90c.css",
+    "main.js": "/hieun33/react_start.git/static/js/main.c1e366c6.js",
     "index.html": "/hieun33/react_start.git/index.html",
-    "main.efcc4da4.css.map": "/hieun33/react_start.git/static/css/main.efcc4da4.css.map",
-    "main.1b4109c5.js.map": "/hieun33/react_start.git/static/js/main.1b4109c5.js.map"
+    "main.0afed90c.css.map": "/hieun33/react_start.git/static/css/main.0afed90c.css.map",
+    "main.c1e366c6.js.map": "/hieun33/react_start.git/static/js/main.c1e366c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.efcc4da4.css",
-    "static/js/main.1b4109c5.js"
+    "static/css/main.0afed90c.css",
+    "static/js/main.c1e366c6.js"
   ]
 }

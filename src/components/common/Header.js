@@ -1,14 +1,18 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useRef } from 'react';
+import Menu from './Menu';
+
 export default function Header(props) {
+    const menu = useRef(null);    
     const active = { color: 'orange' };
 
     let url = '';
     props.type ==='main'
-        ? (url = process.env.PUBLIC_URL + '/img/logo_w.png')
-        : (url = process.env.PUBLIC_URL + '/img/logo_b.png')
+        ? (url = process.env.PUBLIC_URL + '/img/logo_b.jpg')
+        : (url = process.env.PUBLIC_URL + '/img/logo_b.jpg')
     //프롭스의 타입이 메인이라면
     //메인이면 _W 아니면 _b
   
@@ -26,40 +30,43 @@ export default function Header(props) {
                 </h1>
                 <ul id="gnb">
                     <li>
-                        <NavLink to='/department' activeStyle={active}>
-                            Department
+                        <NavLink to='/About' activeStyle={active}>
+                            About
                         </NavLink>
 
                     </li>
                     <li>
-                        <NavLink to='/community' activeStyle={active}>
-                            Community
+                        <NavLink to='/Product' activeStyle={active}>
+                            Product
                         </NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink to='/gallery' activeStyle={active}>
                             Gallery
                         </NavLink>
 
-                    </li>
+                    </li> */}
                     <li>
                         <NavLink to='/youtube' activeStyle={active}>
                             Youtube
                         </NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink to='/location' activeStyle={active}>
                             Location
                         </NavLink>
-                    </li>
+                    </li> */}
                     <li>
-                        <NavLink to='/member' activeStyle={active}>
+                        <NavLink to='/signup' activeStyle={active}>
                             Member
                         </NavLink>
                     </li>
                 </ul>
-                <FontAwesomeIcon icon={faBars} />
+                <FontAwesomeIcon icon={faBars} onClick={()=>menu.current.toggle()} />
             </div>
+
+            {/* menu.current에 담기는 값은 자식컴포넌트에서 useImperativeHandle이 내보내주고 있는 toggle함수 */}
+            <Menu ref={menu} />
         </header>
     )
 }

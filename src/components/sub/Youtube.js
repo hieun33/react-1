@@ -1,13 +1,15 @@
 import Layout from "../common/Layout";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Popup from "../common/Popup";
 
 export default function Youtube() {
 
+    const pop = useRef(null);
     const [Vids, setVids] = useState([]);
-    const [Open, setOpen] = useState(false); //처음값false;오픈해야 true되게
+    // const [Open, setOpen] = useState(false); //처음값false;오픈해야 true되게
     const [Index, setIndex] = useState(0);
+    
 
     useEffect(() => {
         const key = 'AIzaSyAKqZ1Dx9awi1lCS84qziASeQYZJqLxLSM';
@@ -40,7 +42,8 @@ export default function Youtube() {
                         </div>
                         {/* setOpen사용 변화를감지하고 재랜더링 그래고 오픈 */}
                         <div className="pic" onClick={()=>{ 
-                            setOpen(true)
+                            pop.current.open();
+                            // setOpen(true)
                             setIndex(index)}}>
                             <img
                                 src={data.snippet.thumbnails.standard.url}
@@ -51,10 +54,17 @@ export default function Youtube() {
             })}
 
         </Layout>
-        {Open && <Popup setOpen={setOpen}>
+
+         {/* {Open && <Popup setOpen={setOpen}>
                 <iframe src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`} frameBorder='0' ></iframe>
             </Popup>}
-        {/* setOpen 되어 팝업 */}
+        {/* setOpen 되어 팝업 */} 
+         <Popup ref={pop}>
+            {Vids.length !== 0 && (  
+            <iframe src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`} frameBorder='0' ></iframe>)}
+            </Popup>
         </>
+
+        
     );
 }

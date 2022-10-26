@@ -3,7 +3,7 @@ import Layout from "../common/Layout";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function Department() {
+export default function About() {
     const path = process.env.PUBLIC_URL;
     const [Members, setMembers] = useState([]);
 
@@ -14,7 +14,6 @@ export default function Department() {
         })
     }, []);
 
-
     useEffect(() => {
         console.log(Members);
     }, [Members]);
@@ -22,8 +21,9 @@ export default function Department() {
 
 
 
+ 
     return (
-        <Layout name={'Department'}>
+        <Layout name={'About'}>
             {Members.map((data, index) => {
                 return (
                     <article key={index}>

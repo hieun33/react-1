@@ -1,4 +1,4 @@
-.Department {
+.About{
 	> .inner {
 		&::after {
 			content: '';
@@ -34,7 +34,7 @@
 }
 
 @media screen and (max-width: 1179px) {
-	.Department {
+	.About {
 		> .inner {
 			article {
 				width: 50%;
@@ -50,7 +50,7 @@
 }
 
 @media screen and (max-width: 539px) {
-	.Department {
+	.About {
 		> .inner {
 			article {
 				width: 100%;
