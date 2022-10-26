@@ -58,7 +58,7 @@ export default function Header(props) {
                     </li> */}
                     <li>
                         <NavLink to='/signup' activeStyle={active}>
-                            Member
+                            Sign up
                         </NavLink>
                     </li>
                 </ul>

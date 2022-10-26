@@ -9,7 +9,9 @@ function Pics({ Scrolled, start}){
 
     return(
         <main id='pics' className='myScroll'>
-           <p 
+            <h1>INGREDIENS</h1>
+            <img src={process.env.PUBLIC_URL + '/img/p2.png'} alt="제품사진" />
+           {/* <p 
             style={{left : 100 + position,}}
         // style={
         //     position >=0
@@ -20,7 +22,7 @@ function Pics({ Scrolled, start}){
             style ={{
                 left : 100 + position / 2,
             }}
-        >FLICKR</h3>
+        >INGREDIENTS</h3> */}
         </main>
     );
 }

@@ -9,6 +9,7 @@ function Vids(){
 
     return(
         <main id="vids" className='myScroll'>
+            <h1>Product</h1>
             <Swiper
             modules={[Pagination,Navigation]}
             pagination={{
