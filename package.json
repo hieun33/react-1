@@ -1,5 +1,5 @@
 {
-  "homepage": "https://hieun33.github.io/react-po/",
+  "homepage": "https://hieun33.github.io/react-1/",
   "name": "test",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +19,7 @@
     "sass": "^1.51.0",
     "swiper": "^8.4.4"
   },
-  "scripts": {    
+  "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
