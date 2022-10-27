@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Vai&display=swap'); //Noto Sans Vai
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');;//Open Sans
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap');//work sans
 $tablet: 1179px;
 $mobile: 539px;
 
@@ -17,6 +18,7 @@ $mobile: 539px;
 @import 'main/vids';
 @import 'main/visual';
 @import 'main/btns';
+@import 'main/ban';
 
 //sub
 @import 'sub/product';

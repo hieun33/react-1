@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "../common/Header";
-import News from "./News";
-import Pics from "./Pics";
-import Vids from "./Vids";
 import Visual from "./Visual";
+import Pics from "./Pics";
+import Banner from "./Banner";
+import Vids from "./Vids";
+import News from "./News";
 import Btns from "./Btns";
 import Anime from "../../asset/Anime";
 
@@ -106,6 +107,7 @@ function Main(){
         <Header type={'main'}/>
         <Visual />        
         <Pics Scrolled={Scrolled} start={pos.current[2]} />
+        <Banner />
         <Vids />
         <News />
         <Btns setIndex={setIndex} />

@@ -10,19 +10,41 @@ function Pics({ Scrolled, start}){
     return(
         <main id='pics' className='myScroll'>
             <h1>INGREDIENS</h1>
-            <img src={process.env.PUBLIC_URL + '/img/p2.png'} alt="제품사진" />
-           {/* <p 
-            style={{left : 100 + position,}}
-        // style={
-        //     position >=0
-        //     ? { left :100 + position, }
-        //     : null }
-        >FLICKR</p>
-        <h3
-            style ={{
-                left : 100 + position / 2,
-            }}
-        >INGREDIENTS</h3> */}
+            <div className="inner">
+                <div className="wrap">
+                    <article>
+                        <h2>Organic Cotton</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus incidunt aliquid molestiae, perferendis at illo nemo dicta eligendi pariatur consequatur exercitationem delectus, in reprehenderit a.</p> 
+                    </article>   
+                    <article>
+                        <h2>Hydrating Serum</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus incidunt aliquid molestiae, perferendis at illo nemo dicta eligendi pariatur consequatur exercitationem delectus, in reprehenderit a.</p> 
+                    </article>
+                </div>
+                        
+                <div className="wrap">                    
+                    <img src={process.env.PUBLIC_URL + '/img/p2.png'} alt="제품사진" />                                           
+                </div>   
+
+                <div className="wrap">
+                    <article>
+                        <h2>Carbon Active</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus incidunt aliquid molestiae, perferendis at illo nemo dicta eligendi pariatur consequatur exercitationem delectus, in reprehenderit a.</p> 
+                    </article>
+                    <article>
+                        <h2>Oil Control Essence</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus incidunt aliquid molestiae, perferendis at illo nemo dicta eligendi pariatur consequatur exercitationem delectus, in reprehenderit a.</p>                             
+                    </article>
+                </div>      
+            </div> 
+
+
+            <h3>15 minutes a week. All your skin needs.Hydration. Purity. Oil control.
+            </h3>
+
+            <h4>
+                A sheet of 100% organic cotton that makes sure that the most beneficial ingredients for your<br /> skin are actually absorved deep into your skin instead of evaporating away
+            </h4>
         </main>
     );
 }
