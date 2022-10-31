@@ -70,8 +70,12 @@
 				ul{
 					display: flex;
 					justify-content: end;
+					padding-left: 5px;
 					li{
-						color: #000;
+						
+						a{
+							color: #000;
+						}
 					}
 
 				}		

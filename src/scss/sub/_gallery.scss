@@ -1,10 +1,12 @@
 .Gallery{
+    background-color: #fff;
     .loading{
         position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
         z-index: 5;
+        width: 40%;
     }
     .controls{
         display: flex;
@@ -18,7 +20,7 @@
                 width: 130px;
                 height: 30px;
                 background: #555;
-                font: 12px/30px 'arial';
+                font: 12px/30px 'Noto Sans Vai';
                 color: #ddd;
                 text-align: center;
                 cursor: pointer;
@@ -40,7 +42,7 @@
                 height: 26px;
                 border: none;
                 background: #555;
-                font: 12px/30px 'arial';
+                font: 12px/30px 'Noto Sans Vai';
                 color: #ddd;
                 text-align: center;
                 cursor: pointer;
