@@ -1,20 +1,37 @@
 .About{
+	width: 100%;
+	figure{
+		background-color: #566f6b;
+	}
 	> .inner {
+		width: 70%;
+		margin: 50px auto;
+		
+		h1{
+			display: block;
+			margin-right: 100px;
+		}
+		>p{
+			content:'Meet the charming members who are making the company.';
+			
+		}
+		
 		&::after {
 			content: '';
 			display: block;
 			clear: both;
 		}
 		article {
-			width: 33.333%;
+			width: 20%;
 			float: left;
-			padding: 10px;
-			margin-bottom: 50px;
-			.inner {
+			padding: 20px;
+			margin-bottom: 70px;
+			
+			>.inner {
 				width: 100%;
 				.pic {
 					width: 100%;
-					height: 300px;
+					height: 400px;
 					background: #111;
 					margin-bottom: 20px;
 					filter: saturate(0.2);
@@ -26,8 +43,22 @@
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
+						&:nth-of-type(6){
+							display:none;
+						}
 					}
 				}
+				h3{
+					font: bold 30px/1.5 'Noto Sans Vai';
+					letter-spacing: 2px;
+				}
+				p{
+					font: bold 15px/1.2 'Noto Sans Vai';
+				}
+				
+			}
+			h4{
+				font: bold 15px/1.2 'Noto Sans Vai';
 			}
 		}
 	}

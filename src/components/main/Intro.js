@@ -1,4 +1,4 @@
-function Pics({ Scrolled, start}){
+function Intro({ Scrolled, start}){
     //변수 = 특정값 || 대체값;
     // 변수에 대입되는 특정값이 undefined,Nan등 오류값나오면 Scrolled - start 이 0이 안되기때문에 대체값 0을 넣어줌
     const position = Scrolled - start || 0;
@@ -8,7 +8,7 @@ function Pics({ Scrolled, start}){
    // console.log(Scrolled);
 
     return(
-        <main id='pics' className='myScroll'>
+        <main id='intro' className='myScroll'>
             <h1>INGREDIENS</h1>
             <div className="inner">
                 <div className="wrap">
@@ -49,4 +49,4 @@ function Pics({ Scrolled, start}){
     );
 }
 
-export default Pics;
+export default Intro;

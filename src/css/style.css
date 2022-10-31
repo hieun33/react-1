@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Vai&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap");
@@ -36,24 +35,29 @@ footer {
   padding: 30px 0px;
   background: #e7e7e7; }
   footer .inner {
-    width: 1180px;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     background: #e7e7e7; }
-    footer .inner img {
-      width: 100%;
-      height: 250px; }
-    footer .inner article {
-      position: relative;
-      width: 100%; }
-      footer .inner article h1 {
-        font: 20px/1 'open sans';
-        color: #444;
-        margin-bottom: 20px; }
-      footer .inner article ul li a {
-        font: 15px/1.2 'open sans';
-        color: #444; }
+    footer .inner .wrap {
+      width: 1180px;
+      display: flex; }
+      footer .inner .wrap img {
+        width: 100%;
+        height: 250px; }
+      footer .inner .wrap article {
+        position: relative;
+        width: 100%;
+        margin: 80px 80px; }
+        footer .inner .wrap article h1 {
+          font: 20px/1 'open sans';
+          color: #444;
+          margin-bottom: 20px; }
+        footer .inner .wrap article ul li a {
+          font: 15px/1.4 'open sans';
+          color: #666; }
 
 @media screen and (max-width: 1179px) {
   footer .inner {
@@ -62,9 +66,14 @@ footer {
 .content figure {
   width: 100%;
   height: 300px;
-  background: #bbb;
+  background: #566f6b;
   opacity: 0;
-  transition: 1s; }
+  transition: 1s;
+  overflow: hidden; }
+  .content figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 .content > .inner {
   width: 1180px;
   min-height: 400px;
@@ -74,16 +83,11 @@ footer {
   transform: translateY(100px);
   transition: 0.5s; }
   .content > .inner h1 {
-    font: normal 60px/1 'work sans';
-    color: #111;
-    margin-bottom: 70px; }
-    .content > .inner h1::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 1px;
-      background: #555;
-      margin-top: 20px; }
+    font: normal 100px/1 'work sans';
+    color: #333;
+    margin: 50px 0; }
+  .content > .inner p {
+    font: 20px/1.2 'work sans'; }
 .content.on figure {
   opacity: 1; }
 .content.on > .inner {
@@ -204,137 +208,6 @@ header {
     right: 5vw;
     cursor: pointer; }
 
-#news {
-  width: 100%;
-  height: 100vh;
-  background: #c6ffc6;
-  position: relative;
-  padding: 10vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; }
-  #news h1 {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px; }
-  #news article {
-    width: 15%;
-    min-height: 180px;
-    border: 1px solid #888;
-    padding: 20px;
-    margin: 10px;
-    transform: rotateY(200deg) translate(-400px);
-    opacity: 0;
-    transition-duration: 0.5s; }
-    #news article h2 {
-      font: bold 18px/1 'arial';
-      color: #444;
-      margin-bottom: 15px; }
-    #news article p {
-      font: 14px/1.2 'arial';
-      color: #777; }
-  #news.on article {
-    opacity: 1;
-    transform: rotateY(0deg) translate(0px); }
-    #news.on article:nth-of-type(1) {
-      transition-delay: 0.3s; }
-    #news.on article:nth-of-type(2) {
-      transition-delay: 0.6s; }
-    #news.on article:nth-of-type(3) {
-      transition-delay: 0.9s; }
-    #news.on article:nth-of-type(4) {
-      transition-delay: 1.2s; }
-    #news.on article:nth-of-type(5) {
-      transition-delay: 1.5s; }
-
-#pics {
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  position: relative;
-  padding: 10vw;
-  overflow: hidden; }
-  #pics h1 {
-    font: bold 55px/1 'Open Sans';
-    letter-spacing: 3px;
-    color: #b4bdba;
-    text-align: center;
-    margin-bottom: 50px; }
-  #pics .inner {
-    width: 100%; }
-    #pics .inner::after {
-      content: '';
-      display: block;
-      clear: both; }
-    #pics .inner .wrap {
-      width: 33.333%;
-      float: left; }
-      #pics .inner .wrap article {
-        width: 100%;
-        position: relative;
-        margin: 80px auto; }
-        #pics .inner .wrap article h2 {
-          font: bold 25px/1 "open sans";
-          color: #243b39;
-          margin-bottom: 20px; }
-        #pics .inner .wrap article p {
-          font: bold 14px/1.7 'open sans';
-          color: #999; }
-      #pics .inner .wrap:nth-of-type(1) article {
-        text-align: right; }
-      #pics .inner .wrap img {
-        width: 300px;
-        margin: 10px auto 50px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7)); }
-  #pics h3 {
-    font: bold 20px/1 'open sans';
-    letter-spacing: 1px;
-    color: #566f6b;
-    text-align: center;
-    margin-bottom: 30px; }
-  #pics h4 {
-    font: bold 13px/1.3 'open sans';
-    color: #888;
-    text-align: center; }
-
-#vids {
-  width: 100%;
-  height: 100vh;
-  background: #fff;
-  position: relative;
-  padding: 11vw; }
-  #vids h1 {
-    font: bold 50px/1 'Open Sans';
-    color: #b4bdba;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-bottom: 70px; }
-  #vids .swiper {
-    height: 100%; }
-    #vids .swiper .swiper-slide {
-      width: 100%; }
-      #vids .swiper .swiper-slide .inner {
-        width: 100%;
-        height: 100%;
-        background: #e6e8e7;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font: bold 50px/1 'open sans';
-        color: #666;
-        opacity: 0.5;
-        transform: scale(0.8);
-        transition: opacity 0.5s, transform 0.5s; }
-      #vids .swiper .swiper-slide.swiper-slide-active .inner {
-        opacity: 1;
-        transform: scale(1); }
-
 #visual {
   width: 100%;
   height: 700px;
@@ -384,6 +257,180 @@ header {
     z-index: 3;
     filter: drop-shadow(-10px 5px 5px rgba(0, 0, 0, 0.7)); }
 
+#intro {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+  padding: 10vw;
+  overflow: hidden; }
+  #intro h1 {
+    font: bold 55px/1 'Open Sans';
+    letter-spacing: 3px;
+    color: #b4bdba;
+    text-align: center;
+    margin-bottom: 50px; }
+  #intro .inner {
+    width: 100%; }
+    #intro .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #intro .inner .wrap {
+      width: 33.333%;
+      float: left; }
+      #intro .inner .wrap article {
+        width: 100%;
+        position: relative;
+        margin: 80px auto; }
+        #intro .inner .wrap article h2 {
+          font: bold 25px/1 "open sans";
+          color: #243b39;
+          margin-bottom: 20px; }
+        #intro .inner .wrap article p {
+          font: bold 14px/1.7 'open sans';
+          color: #999; }
+      #intro .inner .wrap:nth-of-type(1) article {
+        text-align: right; }
+      #intro .inner .wrap img {
+        width: 300px;
+        margin: 10px auto 50px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7)); }
+  #intro h3 {
+    font: bold 20px/1 'open sans';
+    letter-spacing: 1px;
+    color: #566f6b;
+    text-align: center;
+    margin-bottom: 30px; }
+  #intro h4 {
+    font: bold 13px/1.3 'open sans';
+    color: #888;
+    text-align: center; }
+
+#ban {
+  width: 100%;
+  height: 100%;
+  background: #8bbeb5; }
+  #ban .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    #ban .inner .wrap {
+      width: 100%;
+      display: flex; }
+      #ban .inner .wrap article {
+        width: 100%;
+        position: relative; }
+        #ban .inner .wrap article img {
+          width: 500px;
+          position: absolute;
+          top: -50px;
+          z-index: 3;
+          filter: drop-shadow(-10px 5px 5px rgba(0, 0, 0, 0.8)); }
+        #ban .inner .wrap article:nth-of-type(2) {
+          margin-left: 200px; }
+        #ban .inner .wrap article h1 {
+          font: bold 25px/1 'open sans';
+          letter-spacing: 1px;
+          color: #fff;
+          margin: 70px 0 20px; }
+        #ban .inner .wrap article p {
+          font: 15px/1.3 'Open Sans';
+          color: #fff; }
+        #ban .inner .wrap article a {
+          cursor: pointer;
+          height: 50px;
+          border: 2px solid #fff;
+          border-radius: 30px;
+          padding: 15px 30px;
+          margin: 50px 0;
+          font: bold 13px/1.3 'Open Sans';
+          background: #fff;
+          color: #15332b;
+          float: left; }
+
+@media screen and (max-width: 1179px) {
+  #ban .inner {
+    width: 100%;
+    padding: 0px 40px; }
+    #ban .inner .wrap {
+      width: 100%; }
+      #ban .inner .wrap article {
+        width: 80%;
+        height: 80%; }
+        #ban .inner .wrap article img {
+          width: 100%;
+          top: 0%; }
+        #ban .inner .wrap article h1 {
+          font-size: 20px;
+          margin: 50px 0; }
+        #ban .inner .wrap article p {
+          font-size: 10px; }
+        #ban .inner .wrap article a {
+          margin: 30px 0; } }
+#pro {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  position: relative;
+  padding: 5vw 0; }
+  #pro h1 {
+    font: bold 50px/1 'Open Sans';
+    color: #b4bdba;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 70px; }
+  #pro .swiper {
+    height: 100%;
+    padding: 0 100px; }
+    #pro .swiper .swiper-slide {
+      width: 100%;
+      font: bold 20px/3 'open sans';
+      color: #777;
+      text-align: center; }
+      #pro .swiper .swiper-slide .inner {
+        width: 100%;
+        height: 80%;
+        background: #e6e8e7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: bold 50px/1 'open sans';
+        color: #666;
+        opacity: 0.5;
+        transform: scale(0.8);
+        transition: opacity 0.5s, transform 0.5s; }
+        #pro .swiper .swiper-slide .inner .pic {
+          height: 70%;
+          overflow: hidden;
+          margin-bottom: 20px;
+          cursor: pointer;
+          filter: drop-shadow(8px 5px 5px rgba(0, 0, 0, 0.7)); }
+          #pro .swiper .swiper-slide .inner .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+      #pro .swiper .swiper-slide.swiper-slide-active .inner {
+        opacity: 1;
+        transform: scale(1); }
+    #pro .swiper .swiper-pagination {
+      bottom: 60px;
+      filter: grayscale(1) brightness(1);
+      z-index: 3; }
+      #pro .swiper .swiper-pagination .swiper-pagination-bullet {
+        border-radius: 4px;
+        transition: 0.6s;
+        z-index: 6; }
+      #pro .swiper .swiper-pagination .swiper-pagination-bullet-active {
+        width: 40px;
+        border-radius: 4px; }
+    #pro .swiper .swiper-button-prev, #pro .swiper .swiper-button-next {
+      display: none; }
+
 .scroll_navi {
   position: fixed;
   top: 50%;
@@ -403,146 +450,51 @@ header {
       background-color: #111;
       border: #fff; }
 
-#ban {
-  width: 100%;
-  height: 300px;
-  background: #8bbeb5; }
-  #ban .inner {
-    width: 1400px;
-    margin: 0 auto;
-    position: relative; }
-    #ban .inner .wrap {
-      width: 100%;
-      display: flex; }
-      #ban .inner .wrap article {
-        width: 100%;
-        position: relative; }
-        #ban .inner .wrap article img {
-          width: 600px;
-          position: absolute;
-          top: -60px;
-          z-index: 3;
-          filter: drop-shadow(-10px 5px 5px rgba(0, 0, 0, 0.8)); }
-        #ban .inner .wrap article:nth-of-type(2) {
-          margin-left: 200px; }
-        #ban .inner .wrap article h1 {
-          font: bold 25px/1 'open sans';
-          letter-spacing: 1px;
-          color: #fff;
-          margin: 70px 0 20px; }
-        #ban .inner .wrap article p {
-          font: 15px/1.3 'Open Sans';
-          color: #fff; }
-        #ban .inner .wrap article a {
-          cursor: pointer;
-          height: 50px;
-          border: 2px solid #fff;
-          border-radius: 30px;
-          padding: 15px 30px;
-          margin-top: 50px;
-          font: bold 13px/1.3 'Open Sans';
-          background: #fff;
-          color: #15332b;
-          float: left; }
-
-.Product > .inner .inputBox {
-  width: 100%;
-  border: 1px solid #bbb;
-  padding: 50px;
-  margin-bottom: 50px; }
-  .Product > .inner .inputBox input[type='text'],
-  .Product > .inner .inputBox textarea {
-    width: 50%;
-    padding: 8px 10px;
-    border: 1px solid #aaa;
-    margin-bottom: 20px;
-    resize: none; }
-  .Product > .inner .inputBox .btnSet button {
-    width: 150px;
-    height: 30px;
-    display: inline-block;
-    border: none;
-    background: #555;
-    color: #fff;
-    cursor: pointer;
-    margin-right: 20px; }
-.Product > .inner .showBox {
-  width: 100%;
-  border: 1px solid #bbb;
-  padding: 50px; }
-  .Product > .inner .showBox article {
-    background: #fff;
-    padding: 30px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: center; }
-    .Product > .inner .showBox article .editTxt {
-      width: 60%; }
-      .Product > .inner .showBox article .editTxt input[type='text'],
-      .Product > .inner .showBox article .editTxt textarea {
-        width: 100%;
-        padding: 8px 10px;
-        border: 1px solid lightblue;
-        margin-bottom: 20px;
-        background: #eaf9f9;
-        resize: none; }
-    .Product > .inner .showBox article .btnSet {
-      display: flex;
-      align-items: center; }
-      .Product > .inner .showBox article .btnSet button {
-        background: transparent;
-        margin: 10px;
-        cursor: pointer;
-        border: none; }
-        .Product > .inner .showBox article .btnSet button:nth-of-type(1) {
-          color: orange; }
-        .Product > .inner .showBox article .btnSet button:nth-of-type(2) {
-          color: orangered; }
-
-@media screen and (max-width: 1179px) {
-  .Product > .inner .inputBox input[type='text'],
-  .Product > .inner .inputBox textarea {
-    width: 100%; }
-  .Product > .inner .inputBox .btnSet {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-    .Product > .inner .inputBox .btnSet button {
-      width: 47%;
-      margin-right: 0px; }
-  .Product > .inner .showBox article .editTxt,
-  .Product > .inner .showBox article .txt {
-    width: 100%; }
-  .Product > .inner .showBox article .btnSet {
-    margin-top: 20px; }
-    .Product > .inner .showBox article .btnSet button {
-      margin-left: 0px; } }
-.About > .inner::after {
-  content: '';
-  display: block;
-  clear: both; }
-.About > .inner article {
-  width: 33.333%;
-  float: left;
-  padding: 10px;
-  margin-bottom: 50px; }
-  .About > .inner article .inner {
-    width: 100%; }
-    .About > .inner article .inner .pic {
-      width: 100%;
-      height: 300px;
-      background: #111;
-      margin-bottom: 20px;
-      filter: saturate(0.2);
-      transition: 0.5s; }
-      .About > .inner article .inner .pic:hover {
-        filter: saturate(1.1); }
-      .About > .inner article .inner .pic img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
+.About {
+  width: 100%; }
+  .About figure {
+    background-color: #566f6b; }
+  .About > .inner {
+    width: 70%;
+    margin: 50px auto; }
+    .About > .inner h1 {
+      display: block;
+      margin-right: 100px; }
+    .About > .inner > p {
+      content: 'Meet the charming members who are making the company.'; }
+    .About > .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .About > .inner article {
+      width: 20%;
+      float: left;
+      padding: 20px;
+      margin-bottom: 70px; }
+      .About > .inner article > .inner {
+        width: 100%; }
+        .About > .inner article > .inner .pic {
+          width: 100%;
+          height: 400px;
+          background: #111;
+          margin-bottom: 20px;
+          filter: saturate(0.2);
+          transition: 0.5s; }
+          .About > .inner article > .inner .pic:hover {
+            filter: saturate(1.1); }
+          .About > .inner article > .inner .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+            .About > .inner article > .inner .pic img:nth-of-type(6) {
+              display: none; }
+        .About > .inner article > .inner h3 {
+          font: bold 30px/1.5 'Noto Sans Vai';
+          letter-spacing: 2px; }
+        .About > .inner article > .inner p {
+          font: bold 15px/1.2 'Noto Sans Vai'; }
+      .About > .inner article h4 {
+        font: bold 15px/1.2 'Noto Sans Vai'; }
 
 @media screen and (max-width: 1179px) {
   .About > .inner article {
@@ -556,6 +508,80 @@ header {
     margin-bottom: 30px; }
     .About > .inner article .inner .pic {
       height: 200px; } }
+.News > .inner .inputBox {
+  width: 100%;
+  border: 1px solid #bbb;
+  padding: 50px;
+  margin-bottom: 50px; }
+  .News > .inner .inputBox input[type='text'],
+  .News > .inner .inputBox textarea {
+    width: 50%;
+    padding: 8px 10px;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+    resize: none; }
+  .News > .inner .inputBox .btnSet button {
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    border: none;
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 20px; }
+.News > .inner .showBox {
+  width: 100%;
+  border: 1px solid #bbb;
+  padding: 50px; }
+  .News > .inner .showBox article {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center; }
+    .News > .inner .showBox article .editTxt {
+      width: 60%; }
+      .News > .inner .showBox article .editTxt input[type='text'],
+      .News > .inner .showBox article .editTxt textarea {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid lightblue;
+        margin-bottom: 20px;
+        background: #eaf9f9;
+        resize: none; }
+    .News > .inner .showBox article .btnSet {
+      display: flex;
+      align-items: center; }
+      .News > .inner .showBox article .btnSet button {
+        background: transparent;
+        margin: 10px;
+        cursor: pointer;
+        border: none; }
+        .News > .inner .showBox article .btnSet button:nth-of-type(1) {
+          color: orange; }
+        .News > .inner .showBox article .btnSet button:nth-of-type(2) {
+          color: orangered; }
+
+@media screen and (max-width: 1179px) {
+  .News > .inner .inputBox input[type='text'],
+  .News > .inner .inputBox textarea {
+    width: 100%; }
+  .News > .inner .inputBox .btnSet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .News > .inner .inputBox .btnSet button {
+      width: 47%;
+      margin-right: 0px; }
+  .News > .inner .showBox article .editTxt,
+  .News > .inner .showBox article .txt {
+    width: 100%; }
+  .News > .inner .showBox article .btnSet {
+    margin-top: 20px; }
+    .News > .inner .showBox article .btnSet button {
+      margin-left: 0px; } }
 .Gallery .loading {
   position: absolute;
   top: 0;
@@ -698,8 +724,8 @@ header {
     text-align: left; }
     .Signup > .inner table th:last-child {
       text-align: center; }
-    .Signup > .inner table th input[type='reset']
-    input[type='submit'] {
+    .Signup > .inner table th input[type='reset'],
+    .Signup > .inner table th input[type='submit'] {
       border: 1px solid #aaa;
       width: 150px;
       height: 30px;
@@ -732,12 +758,12 @@ header {
       margin-left: 10px; }
 
 @media screen and (max-width: 1179px) {
-  .Signup > .inner td input[type='text'],
-  .Signup > .inner td input[type='password'],
-  .Signup > .inner td select,
-  .Signup > .inner td textarea {
+  .Signup > .inner table td input[type='text'],
+  .Signup > .inner table td input[type='password'],
+  .Signup > .inner table td select,
+  .Signup > .inner table td textarea {
     width: 80%; }
-  .Signup > .inner td .err {
+  .Signup > .inner table td .err {
     display: block;
     margin-top: 10px; } }
 @media screen and (max-width: 539px) {
@@ -747,7 +773,7 @@ header {
     .Signup > .inner table th:last-child {
       display: block;
       width: 100%; }
-    .Signup > .inner table th input[type="reset"],
+    .Signup > .inner table th input[type='reset'],
     .Signup > .inner table th input[type='submit'] {
       width: 48%;
       margin: 0px; }
@@ -758,7 +784,7 @@ header {
     .Signup > .inner table td input[type='password'],
     .Signup > .inner table td select,
     .Signup > .inner table td textarea {
-      width: 80%; } }
+      width: 100%; } }
 .Youtube article {
   border-top: 1px solid #aaa;
   padding: 20px 0px;

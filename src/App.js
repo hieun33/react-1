@@ -10,7 +10,7 @@ import Main from './components/main/Main';
 
 
 //sub
-import Product from './components/sub/Product';
+import News from './components/sub/News';
 import About from './components/sub/About';
 import Gallery from './components/sub/Gallery';
 import Location from './components/sub/Location';
@@ -42,7 +42,7 @@ function App() {
 
 
 			<Route path='/about' component={About} />
-			<Route path='/product' component={Product} />
+			<Route path='/news' component={News} />
 			<Route path='/gallery' component={Gallery} />
 			<Route path='/location' component={Location} />
 			<Route path='/signup' component={Signup} />

@@ -2,9 +2,16 @@
 	figure {
 		width: 100%;
 		height: 300px;
-		background: #bbb;
+		background: #566f6b;
 		opacity: 0;
 		transition: 1s;
+		overflow: hidden;		
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 	> .inner {
 		width: 1180px;
@@ -16,18 +23,23 @@
 		//transition: opacity 0.5s, transform 1s;
 		transition: 0.5s;
 		h1 {
-			font: normal 60px/1 'work sans';
-			color: #111;
-			margin-bottom: 70px;
-			&::after {
-				content: '';
-				display: block;
-				width: 60px;
-				height: 1px;
-				background: #555;
-				margin-top: 20px;
-			}
+			font: normal 100px/1 'work sans';
+			color: #333;
+			margin: 50px 0;
+			// &::after {
+			// 	content: '';
+			// 	display: block;
+			// 	display: none;
+			// 	width: 50%;
+			// 	height: 1px;
+			// 	background: #fff;
+			// 	margin-top: 20px;
+			// }
 		}
+		p{
+			font: 20px/1.2 'work sans';
+		}
+		
 	}
 	&.on {
 		figure {

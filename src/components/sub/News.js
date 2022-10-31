@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Layout from "../common/Layout";
-export default function Product() {
+export default function News() {
 
     
     //더미데이터를 news에 써잇는거를 가져옴.
@@ -158,7 +158,7 @@ export default function Product() {
     //계속 post가 업데이트 될때마다 불러오기
 
     return (
-        <Layout name={"Product"}>
+        <Layout name={"News"}>
             <div className="inputBox">
                 <input type="text" placeholder="제목을 입력하세요" ref={input} />
                 <br />

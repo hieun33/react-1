@@ -5,10 +5,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation'; //navigation 대문자아니고 앞글자소문자여야함
 
 
-function Vids(){
+function Product(){
 
     return(
-        <main id="vids" className='myScroll'>
+        <main id="pro" className='myScroll'>
             <h1>PRODUCT</h1>
             <Swiper
             modules={[Pagination,Navigation]}
@@ -20,16 +20,18 @@ function Vids(){
             loop = {true}
             slidesPerView={3}  //몇페이지 보일건지?
             centeredSlides={true}
+            
+            
             >
                 
-                <SwiperSlide><div className="inner">1</div></SwiperSlide>
-                <SwiperSlide><div className="inner">2</div></SwiperSlide>
-                <SwiperSlide><div className="inner">3</div></SwiperSlide>
-                <SwiperSlide><div className="inner">4</div></SwiperSlide>
-                <SwiperSlide><div className="inner">5</div></SwiperSlide>
+                <SwiperSlide><div className="inner"><div className="pic"><img src={process.env.PUBLIC_URL+'/img/p2.png'} alt="마스크팩" /></div></div>MASK PACK</SwiperSlide>
+                <SwiperSlide><div className="inner"><div className="pic"><img src={process.env.PUBLIC_URL+'/img/p4.png'} alt="튜브형제품" /></div></div>CLEANSER</SwiperSlide>
+                <SwiperSlide><div className="inner"><div className="pic"><img src={process.env.PUBLIC_URL+'/img/p1.png'} alt="세트상품" /></div></div>SET GOODS</SwiperSlide>
+                
+                
             </Swiper>
         </main>
     );
 }
 
-export default Vids;
+export default Product;

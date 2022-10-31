@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Vai&display=swap'); //Noto Sans Vai
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');;//Open Sans
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap');//work sans
@@ -13,16 +13,17 @@ $mobile: 539px;
 @import 'common/popup';
 
 //main
-@import 'main/news';
-@import 'main/pics';
-@import 'main/vids';
 @import 'main/visual';
-@import 'main/btns';
+@import 'main/intro';
 @import 'main/ban';
+@import 'main/pro';
+ //@import 'main/news'; //여기서 가로 스크롤 생김
+@import 'main/btns';
+
 
 //sub
-@import 'sub/product';
 @import 'sub/About';
+@import 'sub/news';
 @import 'sub/gallery';
 @import 'sub/location';
 @import 'sub/signup';

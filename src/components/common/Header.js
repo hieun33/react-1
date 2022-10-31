@@ -36,8 +36,8 @@ export default function Header(props) {
 
                     </li>
                     <li>
-                        <NavLink to='/Product' activeStyle={active}>
-                            Product
+                        <NavLink to='/News' activeStyle={active}>
+                            News
                         </NavLink>
                     </li>
                     {/* <li>

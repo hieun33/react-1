@@ -2,19 +2,25 @@
 	figure {
 		background: lightgreen;
 	}
-	>.inner{
-		table{
-			width: 100%; border: none; border-top: 2px solid #333;
+	> .inner {
+		table {
+			width: 100%;
+			border: none;
+			border-top: 2px solid #333;
 			border-bottom: 1px solid #333;
-			th{
-				width: 20%; border: none;
+
+			th {
+				width: 20%;
+				border: none;
 				border-bottom: 1px solid #bbb;
-				padding: 15px 30px; text-align: left;
-				&:last-child{
+				padding: 15px 30px;
+				text-align: left;
+				&:last-child {
 					text-align: center;
 				}
-				input[type='reset']
-				input[type='submit']{
+
+				input[type='reset'],
+				input[type='submit'] {
 					border: 1px solid #aaa;
 					width: 150px;
 					height: 30px;
@@ -24,13 +30,13 @@
 					margin: 0px 10px;
 					cursor: pointer;
 				}
-
 			}
-			td{
+			td {
 				border: none;
 				border-bottom: 1px solid #bbb;
 				border-left: 1px solid #bbb;
 				padding: 15px 30px;
+
 				input[type='text'],
 				input[type='password'],
 				select,
@@ -40,14 +46,16 @@
 					padding: 6px 10px;
 					resize: none;
 				}
-				label{
+
+				label {
 					margin-right: 6px;
 				}
 				input[type='radio'],
-				input[type='checkbox']{
+				input[type='checkbox'] {
 					margin-right: 20px;
 				}
-				.err{
+
+				.err {
 					font: 12px/1 'arial';
 					color: hotpink;
 					margin-left: 10px;
@@ -58,51 +66,51 @@
 }
 
 @media screen and (max-width: $tablet) {
-	.Signup{
-		>.inner{
-			td{
-				input[type='text'],
-				input[type='password'],
-				select,
-				textarea{
-					width: 80%;
-				}
-				.err{
-					display: block;
-					margin-top: 10px;
+	.Signup {
+		> .inner {
+			table {
+				td {
+					input[type='text'],
+					input[type='password'],
+					select,
+					textarea {
+						width: 80%;
+					}
+					.err {
+						display: block;
+						margin-top: 10px;
+					}
 				}
 			}
 		}
 	}
-	
 }
 
 @media screen and (max-width: $mobile) {
-	.Signup{
-		>.inner{
-			table{
-				th{
+	.Signup {
+		> .inner {
+			table {
+				th {
 					display: none;
 					padding: 15px 0px;
-					&:last-child{
+					&:last-child {
 						display: block;
 						width: 100%;
 					}
-					input[type="reset"],
-					input[type='submit']{
+					input[type='reset'],
+					input[type='submit'] {
 						width: 48%;
 						margin: 0px;
-					
 					}
 				}
-				td{
+				td {
 					border-left: none;
 					padding: 15px 0px;
 					input[type='text'],
 					input[type='password'],
 					select,
-					textarea{
-						width: 80%;
+					textarea {
+						width: 100%;
 					}
 				}
 			}
