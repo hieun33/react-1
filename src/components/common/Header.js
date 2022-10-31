@@ -40,27 +40,27 @@ export default function Header(props) {
                             News
                         </NavLink>
                     </li>
-                    {/* <li>
+                    <li>
                         <NavLink to='/gallery' activeStyle={active}>
                             Gallery
                         </NavLink>
 
-                    </li> */}
+                    </li>
                     <li>
                         <NavLink to='/youtube' activeStyle={active}>
                             Youtube
                         </NavLink>
                     </li>
-                    {/* <li>
+                    <li>
                         <NavLink to='/location' activeStyle={active}>
                             Location
                         </NavLink>
-                    </li> */}
-                    <li>
+                    </li>
+                    {/* <li>
                         <NavLink to='/signup' activeStyle={active}>
                             Sign up
                         </NavLink>
-                    </li>
+                    </li> */}
                 </ul>
                 <FontAwesomeIcon icon={faBars} onClick={()=>menu.current.toggle()} />
             </div>

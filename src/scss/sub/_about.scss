@@ -1,21 +1,26 @@
+
 .About{
 	width: 100%;
-	figure{
-		background-color: #566f6b;
-	}
+	//figure
 	> .inner {
-		width: 70%;
-		margin: 50px auto;
+		width: 85%;
+		margin: 100px auto;
+		border: 2px solid #000;
 		
-		h1{
+		>h1{
 			display: block;
-			margin-right: 100px;
+			padding: 20px;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 30%;
+				height: 2px;
+				background: #222;
+				margin-top: 20px;
+			}	
 		}
-		>p{
-			content:'Meet the charming members who are making the company.';
 			
-		}
-		
 		&::after {
 			content: '';
 			display: block;
@@ -26,12 +31,17 @@
 			float: left;
 			padding: 20px;
 			margin-bottom: 70px;
-			
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+						
 			>.inner {
 				width: 100%;
 				.pic {
 					width: 100%;
-					height: 400px;
+					height: 500px;
 					background: #111;
 					margin-bottom: 20px;
 					filter: saturate(0.2);
@@ -43,9 +53,7 @@
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
-						&:nth-of-type(6){
-							display:none;
-						}
+						
 					}
 				}
 				h3{
@@ -53,12 +61,32 @@
 					letter-spacing: 2px;
 				}
 				p{
-					font: bold 15px/1.2 'Noto Sans Vai';
-				}
+					font: bold 17px/1.5 'Noto Sans Vai';
+					color: #111;
+					
+					margin: 10px 0;
+					
+				}		
+				ul{
+					display: flex;
+					justify-content: end;
+					li{
+						color: #000;
+					}
+
+				}		
+				
+				
 				
 			}
-			h4{
-				font: bold 15px/1.2 'Noto Sans Vai';
+			
+			
+			
+		}
+		h4{
+			font: bold 15px/1.2 'Noto Sans Vai';
+			&:nth-of-type(1) , &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4){
+				display: none
 			}
 		}
 	}

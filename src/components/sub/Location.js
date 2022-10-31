@@ -7,23 +7,23 @@ export default function Location(){
 
     const info = [
         {
-            title:"삼성동 코엑스",
+            title:"삼성동 사무실",
             latlng: new kakao.maps.LatLng(37.5116828, 127.059151),
             imgUrl: `${process.env.PUBLIC_URL}img/marker1.png`,
             imgSize: new kakao.maps.Size(232,99),
             imgPos: {offset: new kakao.maps.Point(116, 69)},
         },
         {
-            title:"중동 채민집",
+            title:"중동 사무실",
             latlng: new kakao.maps.LatLng(37.4941355, 126.7681066),
-            imgUrl: `${process.env.PUBLIC_URL}img/marker2.png`,
+            imgUrl: `${process.env.PUBLIC_URL}img/marker1.png`,
             imgSize: new kakao.maps.Size(232,99),
             imgPos: {offset: new kakao.maps.Point(116, 69)},
         },
         {
-            title:"더 현대",
+            title:"더 현대 사무실",
             latlng: new kakao.maps.LatLng(37.5258975, 126.9284261),
-            imgUrl: `${process.env.PUBLIC_URL}img/marker3.png`,
+            imgUrl: `${process.env.PUBLIC_URL}img/marker1.png`,
             imgSize: new kakao.maps.Size(232,99),
             imgPos: {offset: new kakao.maps.Point(116, 69)},
         }

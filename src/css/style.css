@@ -452,16 +452,20 @@ header {
 
 .About {
   width: 100%; }
-  .About figure {
-    background-color: #566f6b; }
   .About > .inner {
-    width: 70%;
-    margin: 50px auto; }
-    .About > .inner h1 {
+    width: 85%;
+    margin: 100px auto;
+    border: 2px solid #000; }
+    .About > .inner > h1 {
       display: block;
-      margin-right: 100px; }
-    .About > .inner > p {
-      content: 'Meet the charming members who are making the company.'; }
+      padding: 20px; }
+      .About > .inner > h1::after {
+        content: '';
+        display: block;
+        width: 30%;
+        height: 2px;
+        background: #222;
+        margin-top: 20px; }
     .About > .inner::after {
       content: '';
       display: block;
@@ -471,11 +475,15 @@ header {
       float: left;
       padding: 20px;
       margin-bottom: 70px; }
+      .About > .inner article::after {
+        content: '';
+        display: block;
+        clear: both; }
       .About > .inner article > .inner {
         width: 100%; }
         .About > .inner article > .inner .pic {
           width: 100%;
-          height: 400px;
+          height: 500px;
           background: #111;
           margin-bottom: 20px;
           filter: saturate(0.2);
@@ -486,15 +494,22 @@ header {
             width: 100%;
             height: 100%;
             object-fit: cover; }
-            .About > .inner article > .inner .pic img:nth-of-type(6) {
-              display: none; }
         .About > .inner article > .inner h3 {
           font: bold 30px/1.5 'Noto Sans Vai';
           letter-spacing: 2px; }
         .About > .inner article > .inner p {
-          font: bold 15px/1.2 'Noto Sans Vai'; }
-      .About > .inner article h4 {
-        font: bold 15px/1.2 'Noto Sans Vai'; }
+          font: bold 17px/1.5 'Noto Sans Vai';
+          color: #111;
+          margin: 10px 0; }
+        .About > .inner article > .inner ul {
+          display: flex;
+          justify-content: end; }
+          .About > .inner article > .inner ul li {
+            color: #000; }
+    .About > .inner h4 {
+      font: bold 15px/1.2 'Noto Sans Vai'; }
+      .About > .inner h4:nth-of-type(1), .About > .inner h4:nth-of-type(2), .About > .inner h4:nth-of-type(3), .About > .inner h4:nth-of-type(4) {
+        display: none; }
 
 @media screen and (max-width: 1179px) {
   .About > .inner article {
