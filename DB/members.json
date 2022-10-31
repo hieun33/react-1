@@ -1,34 +1,30 @@
 {
     "members": [
         {
-            "name": "Julia",
+            "name": "Julia Jacklin",
             "positon": "President",
             "pic": "member1.jpg"
         },
         {
-            "name": "David",
+            "name": "David Getta",
             "positon": "Vice President",
             "pic": "member2.jpg"
         },
         {
-            "name": "Emily",
+            "name": "Emily coco",
             "positon": "UI Designer",
             "pic": "member3.jpg"
         },
         {
-            "name": "Paul",
+            "name": "James Arthur",
             "positon": "Front-end Engineer",
             "pic": "member4.jpg"
         },
         {
-            "name": "sara",
+            "name": "Sara Bareilles",
             "positon": "Back-end Engineer",
             "pic": "member5.jpg"
-        },
-        {
-            "name": "Michael",
-            "positon": "Project Manager",
-            "pic": "member6.jpg"
         }
+        
     ]
 }
