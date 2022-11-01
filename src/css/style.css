@@ -815,24 +815,25 @@ header {
     font-weight: bold;
     font-size: 22px;
     font-family: 'work sans';
-    color: #777; }
+    color: #777;
+    display: none; }
   .Youtube article .txt {
     width: 38%;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between; }
     .Youtube article .txt p {
-      font: 14px/1.2 'arial';
-      color: #999;
+      font: 15px/1.2 'work sans';
+      color: #777;
       filter: saturate(0); }
     .Youtube article .txt span {
-      font: 12px/1 'arial';
-      color: orange; }
+      font: 15px/1 'work sans';
+      color: #888; }
   .Youtube article .pic {
-    width: 40%;
-    height: 200px;
+    width: 60%;
+    height: 350px;
     background: #000;
-    filter: saturate(0);
+    filter: saturate(0.6);
     transition: 0.5s; }
     .Youtube article .pic img {
       width: 100%;

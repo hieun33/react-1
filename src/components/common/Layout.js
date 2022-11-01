@@ -8,9 +8,7 @@ function Layout(props) {
 
     return (
         <section className={`content ${props.name}`} ref={frame}>
-            <figure>
-                <img src={`${process.env.PUBLIC_URL}/img/${props.name}.jpg`} alt={props.name} />
-            </figure>
+             
             <div className="inner">
                 <h1>{props.name}</h1>
                 {props.children}
@@ -21,6 +19,12 @@ function Layout(props) {
 export default Layout;
 
 /*
+
+<figure>
+    <img src={`${process.env.PUBLIC_URL}/img/${props.name}.jpg`} alt={props.name} />
+</figure>
+
+
 useEffect
 
 - 컴포넌트가 마운트 되었을때

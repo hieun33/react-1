@@ -2,10 +2,13 @@
 .About{
 	width: 100%;
 	//figure
+	figure{
+		display: none;
+	}
 	> .inner {
 		width: 85%;
 		margin: 100px auto;
-		border: 2px solid #000;
+		border: 1px solid #000;
 		
 		>h1{
 			display: block;
@@ -15,8 +18,8 @@
 				content: '';
 				display: block;
 				width: 30%;
-				height: 2px;
-				background: #222;
+				height: 1px;
+				background: #333;
 				margin-top: 20px;
 			}	
 		}
