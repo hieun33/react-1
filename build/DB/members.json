@@ -3,27 +3,32 @@
         {
             "name": "Julia Jacklin",
             "positon": "President",
-            "pic": "member1.jpg"
+            "pic": "member1.jpg",
+            "scr":"She is the representative of our company. She started making cosmetics because of her fragile and sensitive skin, and is currently trying to grow even more. We are continuously expanding our scope and moving towards the world. She wants to make new cosmetics."
         },
         {
             "name": "David Getta",
             "positon": "Vice President",
-            "pic": "member2.jpg"
+            "pic": "member2.jpg",
+            "scr":"For the sake of the company, we help the CEO to supplement and promote the business. He runs the company with passion."
         },
         {
             "name": "Emily coco",
             "positon": "UI Designer",
-            "pic": "member3.jpg"
+            "pic": "member3.jpg",
+            "scr":"She is working hard to realize a great design. After graduating from an art-related department, I worked for a number of companies in design-related work, and now I am working as a ui designer at the current company."
         },
         {
             "name": "James Arthur",
             "positon": "Front-end Engineer",
-            "pic": "member4.jpg"
+            "pic": "member4.jpg",
+            "scr":"We are trying to implement a user-centered UI. We are doing our best to implement the design we received from the designer. He is still studying today for the growth of himself and the company."
         },
         {
             "name": "Sara Bareilles",
             "positon": "Back-end Engineer",
-            "pic": "member5.jpg"
+            "pic": "member5.jpg",
+            "scr":"Graduated from the Department of Computer Science. She currently manages three companies as well as the company. We are working day and night to manage the site."
         }
         
     ]
