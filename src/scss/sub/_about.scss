@@ -8,7 +8,8 @@
 	> .inner {
 		width: 85%;
 		margin: 100px auto;
-		border: 1px solid #000;
+		border: 1px solid #444;
+		
 		
 		>h1{
 			display: block;
@@ -44,13 +45,13 @@
 				width: 100%;
 				.pic {
 					width: 100%;
-					height: 500px;
+					height: 400px;
 					background: #111;
 					margin-bottom: 20px;
 					filter: saturate(0.2);
 					transition: 0.5s;
 					&:hover {
-						filter: saturate(1.1);
+						filter: saturate(1);
 					}
 					img {
 						width: 100%;
@@ -80,15 +81,8 @@
 							color: #000;
 						}
 					}
-
-				}		
-				
-				
-				
+				}					
 			}
-			
-			
-			
 		}
 		h4{
 			font: bold 15px/1.2 'Noto Sans Vai';

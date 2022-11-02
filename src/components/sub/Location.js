@@ -4,28 +4,31 @@ import Layout from "../common/Layout";
 export default function Location(){
 
     const { kakao } = window;
+      // 윈도우 객체에 등록되어 있는 카카오키를 변수명으로 비구조화할당을 한것.
+  // 윈도우 객체가 카카오 객체를 사용할 수 있도록 하는 코드.
+  // const kakao = (window).kakao;
 
     const info = [
         {
             title:"삼성동 사무실",
             latlng: new kakao.maps.LatLng(37.5116828, 127.059151),
-            imgUrl: `${process.env.PUBLIC_URL}img/marker1.png`,
-            imgSize: new kakao.maps.Size(232,99),
+            imgUrl: `${process.env.PUBLIC_URL}/img/marker.png`,
+            imgSize: new kakao.maps.Size(70,70),
             imgPos: {offset: new kakao.maps.Point(116, 69)},
         },
         {
             title:"중동 사무실",
             latlng: new kakao.maps.LatLng(37.4941355, 126.7681066),
-            imgUrl: `${process.env.PUBLIC_URL}img/marker1.png`,
-            imgSize: new kakao.maps.Size(232,99),
-            imgPos: {offset: new kakao.maps.Point(116, 69)},
+            imgUrl: `${process.env.PUBLIC_URL}/img/marker.png`,
+            imgSize: new kakao.maps.Size(70,70),
+            imgPos: {offset: new kakao.maps.Point(70, 69)},
         },
         {
             title:"더 현대 사무실",
             latlng: new kakao.maps.LatLng(37.5258975, 126.9284261),
-            imgUrl: `${process.env.PUBLIC_URL}img/marker1.png`,
-            imgSize: new kakao.maps.Size(232,99),
-            imgPos: {offset: new kakao.maps.Point(116, 69)},
+            imgUrl: `${process.env.PUBLIC_URL}/img/marker.png`,
+            imgSize: new kakao.maps.Size(70,70),
+            imgPos: {offset: new kakao.maps.Point(70, 69)},
         }
     ];
 

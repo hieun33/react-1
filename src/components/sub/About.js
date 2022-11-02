@@ -6,7 +6,6 @@ import Popup from "../common/Popup";
 
 ﻿//웹폰트 아이콘을 연결한 컴포넌트 파일 상단에 import구문 입력 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
-import { faBars } from '@fortawesome/free-solid-svg-icons' 
 import {faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 //컴포넌트 함수으 리턴문 안쪽에 아이콘 컴포넌트 추가 

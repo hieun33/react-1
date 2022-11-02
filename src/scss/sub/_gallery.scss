@@ -1,123 +1,134 @@
-.Gallery{
+body{
     background-color: #fff;
-    .loading{
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 5;
-        width: 40%;
-    }
-    .controls{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        nav{
-            padding: 10px; display: flex;
-            gap: 20px;
-            button{
-                border: none;
-                width: 130px;
-                height: 30px;
-                border-radius: 5px;
-                background: rgb(81, 110, 97);
-                font: 12px/30px 'Noto Sans Vai';
-                color: #ddd;
-                text-align: center;
-                cursor: pointer;
-                box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-
-            }
-        }
-        .searchBox{
-            padding-right: 15px;
-            input{
-                width: 200px;
-                height: 26px;
-                background-color: #fff;
-                border: 1px solid #bbb;
-                padding: 3px 8px;
-            }
-            button{
-                width: 80px;
-                height: 26px;
-                border: none;
-                border-radius: 5px;
-                background: rgb(81, 110, 97);
-                font: 12px/30px 'Noto Sans Vai';
-                color: #ddd;
-                text-align: center;
-                cursor: pointer;
-                box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-                margin-left: 5px;
-            }
-        }
-    }
-    .frame{
-        transform: translate(200px);
-        opacity: 0;
-        transition: all 0.5s;
+    .Gallery{
         background-color: #fff;
-
-        &.on{
-            transform: translateY(0px);
-            opacity: 1;
-             background-color: #fff;
-
+        .loading{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            width: 40%;
         }
-        &::after{
-            content: ''; display: block; clear: both;
+        .controls{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            nav{
+                padding: 10px; display: flex;
+                gap: 20px;
+                button{
+                    border: none;
+                    width: 130px;
+                    height: 30px;
+                    border: 1px solid rgb(81, 110, 97);
+                    border-radius: 50px;
+                    background: rgb(81, 110, 97);
+                    font: 12px/30px 'Noto Sans Vai';
+                    color: #fff;
+                    text-align: center;
+                    cursor: pointer;
+                    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    
+                }
+            }
+            .searchBox{
+                padding-right: 15px;
+                input{
+                    width: 200px;
+                    height: 26px;
+                    background-color: #fff;
+                    border: 1px solid rgb(81, 110, 97);
+                    border-radius: 50px;
+                    padding: 3px 8px;
+                }
+                button{
+                    width: 80px;
+                    height: 26px;
+                    border: 1px solid rgb(81, 110, 97);
+                    border-radius: 50px;
+                    background: #fff;
+                    font: 12px/20px 'Noto Sans Vai';
+                    color: #000;
+                    text-align: center;
+                    cursor: pointer;
+                    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+                    margin-left: 5px;
+                }
+            }
         }
-        article{
-            width: 25%; padding: 10px; 
-            float: left; //왜 플롯을 쓰나요? 플렉스 안쓰고? masonry라는 컴포넌트를 사용하기 때문에 플렉스대신 플롯을 쓴다.
-            .inner{
-                width: 100%;
-                padding: 10px;
-                background: rgba(87, 126, 108, 0.4);
-                box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
-                border-radius: 5px;
-                .pic{
+        .frame{
+            transform: translateX(200px);
+            opacity: 0;
+            transition: all 0.5s;
+    
+            &.on{
+                transform: translateX(0px);
+                opacity: 1;
+                 background-color: #fff;
+    
+            }
+            &::after{
+                content: ''; display: block; clear: both;
+            }
+            article{
+                width: 33%; padding: 40px; 
+                height: 400px;
+                float: left; //왜 플롯을 쓰나요? 플렉스 안쓰고? masonry라는 컴포넌트를 사용하기 때문에 플렉스대신 플롯을 쓴다.
+                .inner{
                     width: 100%;
-                    margin-bottom: 5px;
-                    
-                    img{
+                    height: 350px;
+                    padding: 15px;
+                    background: #fff;
+                    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+                    border-left: double;
+                    .pic{
                         width: 100%;
-                        height: 180px;
-                        border-radius: 5px;
-                    }
-                }
-                h2{
-                    font: normal 14px/1.2 'arial';
-                    color: #444;
-                    margin-bottom: 30px;
-                }
-                .profile{
-                    display: flex;
-                    align-items: center;
-                    img{
-                        width: 40px;
-                        border-radius: 50%;
-                        margin-right: 10px;
-                    }
-                    span{
-                        color: rgb(13, 22, 17);
-                        cursor: pointer;
-                        transition:0.5s;
+                        margin-bottom: 50px;
                         
-                        font-size: 20x;
-                        word-break: break-all;
-                        //글자가 삐져나갈때
-                        &:hover{
-                            color:#fff;
+                        img{
+                            width: 100%;
+                            height: 180px;
+                            border-radius: 5px;
                         }
                     }
-                    
+                    h2{
+                        font: normal 17px/1.2 'Open Sans';
+                        color: #444;
+                        margin-bottom: 30px;
+                        
+                    }
+                    .profile{
+                        display: flex;
+                        align-items: center;
+                        font-family: 'Open Sans';
+                        
+                        img{
+                            width: 30px;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                        }
+                        span{
+                            color: rgb(13, 22, 17);
+                            cursor: pointer;
+                            transition: 0.5s;
+                            font-size: 15px;
+                            word-break: break-all;
+                            //글자가 삐져나갈때
+                            &:hover{
+                                color: rgb(140, 202, 140);
+                            }
+                        }
+                        
+                    }
                 }
             }
         }
     }
+  
+
 }
+
 
 @media screen and (max-width: $tablet) {
     section .frame article{
